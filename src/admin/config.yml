@@ -10,26 +10,26 @@ backend:
 # local_backend: true
 
 # Default location for images uploaded through the image widget
-media_folder: "src/assets/images"   # ADJUST if you want to keep the current flat structure
-public_folder: "/assets/images"     # ADJUST to match how images are referenced in your HTML
+media_folder: "src/assets/images"
+public_folder: "/assets/images"
 
 collections:
   - name: "news"
     label: "News"
     label_singular: "News item"
-    folder: "src/_data/news"        # ADJUST: ideally one file per news item here
+    folder: "src/news"              # matches the migrated posts + directory data file
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Summary", name: "summary", widget: "text", required: false }
+      - { label: "Date", name: "date", widget: "datetime", format: "yyyy-MM-dd" }
       - { label: "Featured image", name: "image", widget: "image", required: false }
+      - { label: "Summary", name: "summary", widget: "text", required: false }
       - label: "Attached PDF (optional)"
         name: "pdf"
         widget: "file"
         required: false
-        media_folder: "src/assets/documents"   # PDFs go to their own folder
+        media_folder: "src/assets/documents"
         public_folder: "/assets/documents"
       - { label: "Body", name: "body", widget: "markdown" }
 

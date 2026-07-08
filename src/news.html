@@ -1,120 +1,23 @@
 ---
 layout: layout.njk
 title: News
+description: Latest news and updates from IAEG Peru
 ---
-<section class="page-head has-photo" style="background-image:url('https://images.squarespace-cdn.com/content/v1/684b8db39007506c920bdb83/1751853663705-L1AV7MB80O1MWEFESJAB/unsplash-image-8Jbo0T-DxUI.jpg');">
-  <div class="wrap">
-    <p class="eyebrow">News</p>
-    <h1>What's happening at IAEG Peru</h1>
-  </div>
-</section>
+<section class="wrap news-listing">
+  <h1>News</h1>
 
-<section>
-  <div class="wrap">
-
-    <div class="timeline-item">
-      <div class="when"><strong>Apr</strong>2026</div>
-      <div>
-        <h3>New publication: geoheritage and geoeducation collaboration</h3>
-        <p>IAEG Peru shared a new publication in the Bulletin of the Geological Society of Mexico, "Educational assessment of geosites in Peru: a replicable methodology for Latin America and the Caribbean," led by president Sandra Villacorta with international collaborators.</p>
+  <div class="news-grid">
+    {% for post in collections.news | reverse %}
+    <a class="news-card" href="{{ post.url }}">
+      {% if post.data.image %}
+      <img src="{{ post.data.image }}" alt="{{ post.data.title }}">
+      {% endif %}
+      <div class="news-card-body">
+        <h3>{{ post.data.title }}</h3>
+        <p class="news-date">{{ post.data.date | readableDate }}</p>
+        <p>{{ post.data.summary }}</p>
       </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="when"><strong>Mar</strong>2026</div>
-      <div>
-        <h3>6th Talk Series: Peruvian Women in Geosciences</h3>
-        <p>WEG Peru invited the community to a new edition of its talk series, a space designed to highlight and connect women transforming engineering geology, environmental engineering, and the geosciences in Peru, featuring a special international guest.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="when"><strong>Feb</strong>2026</div>
-      <div>
-        <h3>Workshop for the International Day of Women and Girls in Science</h3>
-        <p>The WEG Peru team held "Earth Explorers," a workshop on February 11 at the Piura National University for girls aged 8–14, using interactive geoscience activities to encourage curiosity and awareness of women's role in the field.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="when"><strong>Jan</strong>2026</div>
-      <div>
-        <h3>Peru featured in the 2025 IAEG International Newsletter</h3>
-        <p>IAEG Peru was featured in the IAEG International Newsletter 2025 (No. 4), with a contribution coordinated by the Social Media Team, highlighting Peruvian geoscience within the global engineering geology community.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="when"><strong>Jan</strong>2026</div>
-      <div>
-        <h3>Meet our new Committee</h3>
-        <p>IAEG Peru presented its 2026 Executive Committee, led by Dr. MSc. Eng. Sandra Villacorta (President) and Eng. Rubén Romero (Vice President), together with the coordinators taking on the network's leadership this year.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="when"><strong>Jan</strong>2026</div>
-      <div>
-        <h3>Call for Submissions: Journal of Advanced Mining Modeling</h3>
-        <p>IAEG Peru invited members and the broader mining and geoscience community to submit research to JAMM, a peer-reviewed journal published by the National University of Trujillo, covering mining engineering, systems modeling, and AI applications.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="when"><strong>Jan</strong>2026</div>
-      <div>
-        <h3>General Coordinator named for the 2nd Peruvian Geotechnical Biennial</h3>
-        <p>Eng. Sandra Melisa Ramírez, President of the Engineering Geology Chapter at CIP Lima and a geologist with over 20 years of mining-sector experience, was introduced as General Coordinator of the 2nd Peruvian Biennial in Geotechnics.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="when"><strong>Oct</strong>2025</div>
-      <div>
-        <h3>Introducing IAEG Women in Engineering Geology (WEG)</h3>
-        <p>IAEG Peru presented the Women in Engineering Geology and the Environment (WEG) Committee, created to strengthen the visibility, participation, and leadership of women in geosciences, engineering, and the environment.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="when"><strong>Sep</strong>2025</div>
-      <div>
-        <h3>Workshop on Engineering Geological Models in Mining</h3>
-        <p>Held within the Slope Stability 2026 framework with support from IAEG Peru and ABGE, this workshop introduced the Engineering Geological Model (EGM) approach based on the IAEG C25 Guidelines, applied across the mining project cycle.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="when"><strong>Aug</strong>2025</div>
-      <div>
-        <h3>Breaking News: IAEG-WEG &amp; WIMS Join Forces</h3>
-        <p>IAEG's Women in Engineering Geosciences (WEG) signed a Memorandum of Understanding with Women in Mining International (WIMs) to strengthen gender equity, leadership opportunities, and professional growth for women in geosciences and mining.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="when"><strong>Aug</strong>2025</div>
-      <div>
-        <h3>Call for Applications: Join the IAEG Peru Committee</h3>
-        <p>IAEG Peru opened applications for volunteer positions including Webmaster and General Secretary, offering members the chance to contribute to the community's growth and support international collaboration initiatives.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="when"><strong>Aug</strong>2025</div>
-      <div>
-        <h3>New strategic alliance to promote Slope Stability 2026 in the LAC region</h3>
-        <p>IAEG Peru announced a new alliance with the Brazilian Association of Engineering and Environmental Geology (ABGE) and the LOP – Large Open Pit Project Peruvian Group, to strengthen regional outreach for the Slope Stability 2026 conference in Lima.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="when"><strong>Apr</strong>2025</div>
-      <div>
-        <h3>MoU signed with IUGS-COGE</h3>
-        <p>A new Memorandum of Understanding with IUGS-COGE supports regional capacity building, professional development, and the integration of engineering geology perspectives into geoscience education in Peru.</p>
-      </div>
-    </div>
-
+    </a>
+    {% endfor %}
   </div>
 </section>

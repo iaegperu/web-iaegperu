@@ -1,0 +1,17 @@
+---
+layout: layout.njk
+---
+<article class="wrap post">
+  <p class="post-back"><a href="/news.html">&larr; Back to News</a></p>
+
+  <h1>{{ title }}</h1>
+  <p class="post-meta">{{ date | readableDate }}</p>
+
+  {% if image %}
+  <img class="post-hero" src="{{ image }}" alt="{{ title }}">
+  {% endif %}
+
+  <div class="post-body">
+    {{ content | safe }}
+  </div>
+</article>
