@@ -1,6 +1,37 @@
 ---
 layout: layout.njk
 title: Partners
+partners:
+  - name: "IUGS - COGE"
+    logo: ""              # ej: "/images/partners/iugs-coge.png"
+    description: ""       # opcional, deja vacío si no quieres párrafo
+    buttonLabel: "Website"
+    buttonUrl: ""          # deja vacío hasta tener el link
+    mouUrl: ""             # opcional, deja vacío hasta tener el MoU firmado
+  - name: "IAPG Peru"
+    logo: ""
+    description: ""
+    buttonLabel: "Website"
+    buttonUrl: ""
+    mouUrl: ""
+  - name: "ABGE"
+    logo: ""
+    description: ""
+    buttonLabel: "Website"
+    buttonUrl: ""
+    mouUrl: ""
+  - name: "Women in Mine Stability"
+    logo: ""
+    description: ""
+    buttonLabel: "Website"
+    buttonUrl: ""
+    mouUrl: ""
+  - name: "CIGECC"
+    logo: ""
+    description: ""
+    buttonLabel: "Website"
+    buttonUrl: ""
+    mouUrl: ""
 ---
 <section class="page-head has-photo" style="background-image:url('https://images.squarespace-cdn.com/content/v1/684b8db39007506c920bdb83/4fa3fffa-ec24-4b9e-b319-884b7efdd842/unsplash-image-8A20jyWomIo.jpg');">
   <div class="wrap">
@@ -27,10 +58,41 @@ title: Partners
 <section class="alt">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">Supporting organization</p>
-      <h2>IAPG Peru</h2>
+      <p class="eyebrow">Our Partners</p>
+      <h2>Organizations we work with</h2>
     </div>
-    <p style="max-width:60ch;">IAPG Peru provides ongoing institutional support to IAEG Peru, helping connect Peruvian professionals and students to the broader international engineering geology community.</p>
+
+    <div class="grid cols-3 partners-grid">
+      {% for p in partners %}
+      <div class="partner-card">
+        <div class="partner-logo-wrap">
+          {% if p.logo %}
+          <img class="partner-logo" src="{{ p.logo }}" alt="{{ p.name }} logo">
+          {% else %}
+          <div class="partner-logo-placeholder">Logo pending</div>
+          {% endif %}
+        </div>
+
+        <h3 class="partner-name">{{ p.name }}</h3>
+
+        {% if p.description %}
+        <p class="partner-description">{{ p.description }}</p>
+        {% endif %}
+
+        <div class="partner-buttons">
+          {% if p.buttonUrl %}
+          <a class="btn ghost" href="{{ p.buttonUrl }}" target="_blank" rel="noopener noreferrer">{{ p.buttonLabel }} &rarr;</a>
+          {% else %}
+          <span class="btn ghost partner-btn-disabled">{{ p.buttonLabel }} (pending)</span>
+          {% endif %}
+
+          {% if p.mouUrl %}
+          <a class="btn ghost partner-mou-btn" href="{{ p.mouUrl }}" target="_blank" rel="noopener noreferrer">View MoU &rarr;</a>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
   </div>
 </section>
 
@@ -44,3 +106,79 @@ title: Partners
     <a class="btn" href="/about.html">Get in touch &rarr;</a>
   </div>
 </section>
+
+<style>
+  /* Estilos scoped solo para las tarjetas de partners.
+     Solo controlan layout/tamaño; heredan tipografía y colores del resto del sitio.
+     Si ya tienes un archivo CSS global, puedes mover este bloque ahí. */
+  .partners-grid {
+    align-items: stretch;
+  }
+
+  .partner-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 24px 18px;
+    background: #fff;
+  }
+
+  .partner-logo-wrap {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+  }
+
+  .partner-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .partner-logo-placeholder {
+    width: 100%;
+    height: 100%;
+    border: 2px dashed rgba(0,0,0,0.15);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    opacity: 0.6;
+    padding: 6px;
+  }
+
+  .partner-name {
+    margin: 0 0 6px 0;
+  }
+
+  .partner-description {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin: 0 0 14px 0;
+  }
+
+  .partner-buttons {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .partner-btn-disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .partner-mou-btn {
+    font-size: 0.85rem;
+  }
+</style>
