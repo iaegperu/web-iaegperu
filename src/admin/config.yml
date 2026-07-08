@@ -1,0 +1,59 @@
+backend:
+  name: github
+  repo: iaegperu/web-iaegperu       # exact owner/repo on GitHub
+  branch: main                      # branch Decap CMS will edit
+  base_url: https://cms-oauth-steel.vercel.app   # your OAuth gateway on Vercel
+  auth_endpoint: auth               # route exposed by the gateway
+
+# Uncomment this line only while testing locally (npx decap-server), it skips
+# real login. Remove/comment it out before using this in production.
+# local_backend: true
+
+# Default location for images uploaded through the image widget
+media_folder: "src/assets/images"   # ADJUST if you want to keep the current flat structure
+public_folder: "/assets/images"     # ADJUST to match how images are referenced in your HTML
+
+collections:
+  - name: "news"
+    label: "News"
+    label_singular: "News item"
+    folder: "src/_data/news"        # ADJUST: ideally one file per news item here
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Summary", name: "summary", widget: "text", required: false }
+      - { label: "Featured image", name: "image", widget: "image", required: false }
+      - label: "Attached PDF (optional)"
+        name: "pdf"
+        widget: "file"
+        required: false
+        media_folder: "src/assets/documents"   # PDFs go to their own folder
+        public_folder: "/assets/documents"
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "Site pages"
+    label_singular: "Page"
+    files:
+      - label: "Homepage"
+        name: "home"
+        file: "src/index.html"      # ADJUST field names to match your actual HTML/template structure
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: false }
+          - { label: "Content", name: "body", widget: "markdown", required: false }
+
+      - label: "About"
+        name: "about"
+        file: "src/about.html"
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: false }
+          - { label: "Content", name: "body", widget: "markdown", required: false }
+
+      - label: "Events"
+        name: "events"
+        file: "src/events.html"
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: false }
+          - { label: "Content", name: "body", widget: "markdown", required: false }
