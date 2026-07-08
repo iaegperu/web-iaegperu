@@ -12,6 +12,10 @@ module.exports = function (eleventyConfig) {
   // Local images uploaded through Decap CMS for new posts
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
 
+  // Decap CMS config file — not an HTML/Nunjucks/Markdown file, so Eleventy
+  // won't copy it unless we tell it to explicitly.
+  eleventyConfig.addPassthroughCopy("src/admin/config.yml");
+
   // Formats a date like "January 15, 2026" for news posts
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     if (!dateObj) return "";
