@@ -7,17 +7,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 :root{
-  --basalt: #23211D;       /* casi negro, cálido */
-  --basalt-soft: #33302A;
-  --stone: #F1ECE0;        /* fondo claro, piedra caliza */
-  --stone-deep: #E4DCC9;   /* banda de estrato más oscura */
-  --paper: #FAF8F2;
-  --clay: #B9632F;         /* acento primario — óxido/arcilla */
-  --clay-deep: #8F4A22;
-  --moss: #4E5C3F;         /* acento secundario — musgo */
-  --ink: #23211D;
+  --basalt: #201F1D;       /* casi negro, para footer */
+  --basalt-soft: #322F2B;
+  --stone: #F7F6F2;        /* fondo claro, del blanco del logo */
+  --stone-deep: #ECE8DD;   /* banda de estrato más oscura */
+  --paper: #FCFBF8;
+  --clay: #D92F37;         /* acento primario — rojo del logo IAEG Peru */
+  --clay-deep: #A62128;
+  --moss: #2B653F;         /* acento secundario — verde del logo internacional */
+  --ink: #1A1A1A;
   --ink-soft: #5B564C;
-  --line: rgba(35,33,29,0.14);
+  --line: rgba(26,26,26,0.14);
 
   --serif: 'Fraunces', Georgia, serif;
   --sans: 'Inter', -apple-system, Segoe UI, sans-serif;
@@ -65,10 +65,22 @@ header.site{
   display:flex;align-items:center;justify-content:space-between;
   padding:16px 32px;max-width:1120px;margin:0 auto;
 }
+.nav-right{display:flex;align-items:center;gap:20px;}
 .brand{display:flex;align-items:center;gap:12px;}
 .brand img{height:40px;width:auto;}
 .brand-text{font-family:var(--serif);font-weight:600;font-size:1.05rem;letter-spacing:.01em;}
 .brand-text span{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;color:var(--ink-soft);text-transform:uppercase;font-weight:400;}
+
+.intl-link{
+  display:flex;align-items:center;gap:8px;
+  padding-left:16px;margin-left:4px;border-left:1px solid var(--line);
+  flex-shrink:0;
+}
+.intl-link img{height:26px;width:auto;opacity:.85;transition:opacity .15s;}
+.intl-link span{font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);line-height:1.2;max-width:9ch;}
+.intl-link:hover img{opacity:1;}
+@media (max-width:960px){.intl-link span{display:none;} .intl-link{padding-left:10px;}}
+@media (max-width:600px){.intl-link{display:none;}}
 
 nav.primary ul{list-style:none;display:flex;gap:28px;margin:0;padding:0;}
 nav.primary a{
