@@ -1,8 +1,8 @@
 ---
 layout: layout.njk
-title: Inicio
+title: home
 ---
 
-# Bienvenido a IAEG Perú
+# Welcome to the IAEG Peru
 
-Aquí irá el contenido principal de la nueva web.
+New content here
