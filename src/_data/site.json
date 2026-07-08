@@ -1,0 +1,12 @@
+{
+  "name": "IAEG Perú",
+  "logo": "/img/IAEG New Logo (1).png",
+  "url": "https://web-iaegperu-git-main-iaeg-peru.vercel.app",
+  "description": "Instituto de Altos Estudios en Gobierno y Gestión Pública del Perú",
+  "menu": [
+    { "name": "Inicio", "url": "/" },
+    { "name": "Noticias", "url": "/noticias/" },
+    { "name": "Eventos", "url": "/eventos/" },
+    { "name": "Institucional", "url": "/institucional/" }
+  ]
+}
