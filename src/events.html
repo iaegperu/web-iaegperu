@@ -1,37 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Events — IAEG Peru</title>
-<link rel="icon" href="IAEG New Logo (1).png">
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-<header class="site">
-  <div class="nav-row">
-    <a class="brand" href="index.html">
-      <img src="IAEG New Logo (1).png" alt="IAEG Peru logo">
-      <span class="brand-text">IAEG Peru<span>Engineering Geology · Peruvian Group</span></span>
-    </a>
-    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav.primary').classList.toggle('open')">&#9776;</button>
-    <nav class="primary">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="our-projects.html">Projects</a></li>
-        <li><a href="portfolio-our-committees.html">Committees</a></li>
-        <li><a href="ourpartners.html">Partners</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="events.html" class="active">Events</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<div class="strata"></div>
-
-<section class="page-head">
+---
+layout: layout.njk
+title: Events
+---
+<section class="page-head has-photo" style="background-image:url('https://images.squarespace-cdn.com/content/v1/684b8db39007506c920bdb83/4fa3fffa-ec24-4b9e-b319-884b7efdd842/unsplash-image-8A20jyWomIo.jpg');">
   <div class="wrap">
     <p class="eyebrow">Events</p>
     <h1>Upcoming events</h1>
@@ -47,7 +18,7 @@
       <div>
         <h3>Mineralogy Workshop</h3>
         <p>A hands-on session covering mineral identification and rock classification, open to members at every level.</p>
-        <img src="Mineralogy Workshop.jpg" alt="Mineralogy Workshop" style="margin-top:14px;max-height:260px;object-fit:cover;">
+        <img src="/Mineralogy Workshop.jpg" alt="Mineralogy Workshop" style="margin-top:14px;max-height:260px;object-fit:cover;">
       </div>
     </div>
 
@@ -56,7 +27,7 @@
       <div>
         <h3>Annual Field Trek</h3>
         <p>Our flagship multi-day expedition through mountain terrain, mapping rock formations and slope conditions with students and mentors.</p>
-        <img src="Annual Field Trek_ Rocky Mountains.jpg" alt="Annual Field Trek" style="margin-top:14px;max-height:260px;object-fit:cover;">
+        <img src="/Annual Field Trek_ Rocky Mountains.jpg" alt="Annual Field Trek" style="margin-top:14px;max-height:260px;object-fit:cover;">
       </div>
     </div>
 
@@ -65,7 +36,7 @@
       <div>
         <h3>Geoscience Expo 2026</h3>
         <p>IAEG Peru presents member research and engages with students at the national geoscience exhibition.</p>
-        <img src="Geoscience Expo 2026.jpg" alt="Geoscience Expo 2026" style="margin-top:14px;max-height:260px;object-fit:cover;">
+        <img src="/Geoscience Expo 2026.jpg" alt="Geoscience Expo 2026" style="margin-top:14px;max-height:260px;object-fit:cover;">
       </div>
     </div>
 
@@ -74,43 +45,9 @@
       <div>
         <h3>Graduate Fellowship Awards Ceremony</h3>
         <p>Recognizing the year's outstanding graduate research in engineering geology from across Peru.</p>
-        <img src="Graduate Fellowship Awards.jpg" alt="Graduate Fellowship Awards" style="margin-top:14px;max-height:260px;object-fit:cover;">
+        <img src="/Graduate Fellowship Awards.jpg" alt="Graduate Fellowship Awards" style="margin-top:14px;max-height:260px;object-fit:cover;">
       </div>
     </div>
 
   </div>
 </section>
-
-<footer class="site">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <h4>IAEG Peru</h4>
-        <p style="color:var(--stone);opacity:.85;max-width:38ch;">Part of a global network advancing engineering geology through innovation, sustainability, and ethical practice.</p>
-      </div>
-      <div>
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="our-projects.html">Projects</a></li>
-          <li><a href="portfolio-our-committees.html">Committees</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Connect</h4>
-        <ul>
-          <li><a href="ourpartners.html">Partners</a></li>
-          <li><a href="news.html">News</a></li>
-          <li><a href="events.html">Events</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 IAEG Peru — Peruvian Group.</span>
-      <span>iaegperu.org</span>
-    </div>
-  </div>
-</footer>
-
-</body>
-</html>

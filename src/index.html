@@ -1,54 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IAEG Peru — Advancing Engineering Geology in Peru</title>
-<meta name="description" content="IAEG Peru is part of a global network dedicated to advancing engineering geology through innovation, sustainability, and ethical practice.">
-<link rel="icon" href="IaegPeru lOGO.png">
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-<header class="site">
-  <div class="nav-row">
-    <a class="brand" href="index.html">
-      <img src="IaegPeru lOGO.png" alt="IAEG Peru logo">
-      <span class="brand-text">IAEG Peru<span>Engineering Geology · Peruvian Group</span></span>
-    </a>
-    <div class="nav-right">
-    <a class="intl-link" href="https://iaeg.info" target="_blank" rel="noopener" title="International Association for Engineering Geology and the Environment">
-      <img src="IAEG New Logo (1).png" alt="IAEG International logo">
-      <span>IAEG International</span>
-    </a>
-    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav.primary').classList.toggle('open')">&#9776;</button>
-    <nav class="primary">
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="our-projects.html">Projects</a></li>
-        <li><a href="portfolio-our-committees.html">Committees</a></li>
-        <li><a href="ourpartners.html">Partners</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="events.html">Events</a></li>
-      </ul>
-    </nav>
-    </div>
-  </div>
-</header>
-<div class="strata"></div>
-
+---
+layout: layout.njk
+title: Home
+description: IAEG Peru is part of a global network dedicated to advancing engineering geology through innovation, sustainability, and ethical practice.
+---
 <section class="hero">
   <div class="wrap">
     <p class="eyebrow">Academic excellence &middot; Professional heritage</p>
     <h1>Advancing Engineering Geology in Peru</h1>
     <p class="lead">IAEG Peru is part of a global network dedicated to advancing engineering geology through innovation, sustainability, and ethical practice. With support from IAPG Peru, we empower Peruvian professionals and students to connect, grow, and lead.</p>
     <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;">
-      <a class="btn" href="about.html">About the association</a>
-      <a class="btn ghost" href="events.html">Upcoming events</a>
+      <a class="btn" href="/about.html">About the association</a>
+      <a class="btn ghost" href="/events.html">Upcoming events</a>
     </div>
     <div class="hero-media">
-      <img src="Minimalist Building Structure.jpg" alt="Engineering geology field structure">
+      <img src="https://images.squarespace-cdn.com/content/v1/684b8db39007506c920bdb83/1751853663705-L1AV7MB80O1MWEFESJAB/unsplash-image-8Jbo0T-DxUI.jpg" alt="Engineering geology field structure">
     </div>
   </div>
 </section>
@@ -67,30 +32,30 @@
     </div>
     <div class="grid cols-3">
       <div class="card">
-        <img src="Annual Field Trek_ Rocky Mountains.jpg" alt="Annual field trek">
+        <img src="/Annual Field Trek_ Rocky Mountains.jpg" alt="Annual field trek">
         <div class="body">
           <div class="meta">Projects</div>
           <h3>Field research programs</h3>
           <p>Applied projects that connect students and professionals with real geological terrain across Peru.</p>
-          <a href="our-projects.html">See projects &rarr;</a>
+          <a href="/our-projects.html">See projects &rarr;</a>
         </div>
       </div>
       <div class="card">
-        <img src="Community Outreach.jpg" alt="Community outreach">
+        <img src="/Community Outreach.jpg" alt="Community outreach">
         <div class="body">
           <div class="meta">Committees</div>
           <h3>Working committees</h3>
           <p>Focused groups driving education, outreach, and technical standards within the association.</p>
-          <a href="portfolio-our-committees.html">Meet committees &rarr;</a>
+          <a href="/portfolio-our-committees.html">Meet committees &rarr;</a>
         </div>
       </div>
       <div class="card">
-        <img src="New Laboratory Partnership.jpg" alt="Laboratory partnership">
+        <img src="/New Laboratory Partnership.jpg" alt="Laboratory partnership">
         <div class="body">
           <div class="meta">Partners</div>
           <h3>Institutional partners</h3>
           <p>Universities, laboratories, and firms collaborating to strengthen the practice across Peru.</p>
-          <a href="ourpartners.html">Our partners &rarr;</a>
+          <a href="/ourpartners.html">Our partners &rarr;</a>
         </div>
       </div>
     </div>
@@ -105,57 +70,23 @@
     </div>
     <div class="grid cols-2">
       <div class="card">
-        <img src="Geoscience Expo 2026.jpg" alt="Geoscience Expo 2026">
+        <img src="/Geoscience Expo 2026.jpg" alt="Geoscience Expo 2026">
         <div class="body">
           <div class="meta">News</div>
           <h3>Geoscience Expo 2026</h3>
           <p>A look at the association's participation in this year's national geoscience exhibition.</p>
-          <a href="news.html">Read the news &rarr;</a>
+          <a href="/news.html">Read the news &rarr;</a>
         </div>
       </div>
       <div class="card">
-        <img src="Mineralogy Workshop.jpg" alt="Mineralogy workshop">
+        <img src="/Mineralogy Workshop.jpg" alt="Mineralogy workshop">
         <div class="body">
           <div class="meta">Event</div>
           <h3>Mineralogy Workshop</h3>
           <p>Hands-on sessions for students and early-career professionals, open to all members.</p>
-          <a href="events.html">See event details &rarr;</a>
+          <a href="/events.html">See event details &rarr;</a>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<footer class="site">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <h4>IAEG Peru</h4>
-        <p style="color:var(--stone);opacity:.85;max-width:38ch;">Part of a global network advancing engineering geology through innovation, sustainability, and ethical practice.</p>
-      </div>
-      <div>
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="our-projects.html">Projects</a></li>
-          <li><a href="portfolio-our-committees.html">Committees</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Connect</h4>
-        <ul>
-          <li><a href="ourpartners.html">Partners</a></li>
-          <li><a href="news.html">News</a></li>
-          <li><a href="events.html">Events</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 IAEG Peru — Peruvian Group.</span>
-      <span>iaegperu.org</span>
-    </div>
-  </div>
-</footer>
-
-</body>
-</html>

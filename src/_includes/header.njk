@@ -1,17 +1,22 @@
-<header>
-  <a href="/">{{ site.name }}</a>
-
-  <nav>
-    {% for item in site.menu %}
-      <a href="{{ item.url }}">{{ item.name }}</a>
-    {% endfor %}
-  </nav>
-<nav>
-  <a href="/">Home</a>
-  <a href="/about/">About</a>
-  <a href="/news/">News</a>
-  <a href="/our projects/">Projects</a>
-  <a href="/committees/">Committees</a>
-  <a href="/partners/">Partners</a>
-</nav>
+<header class="site">
+  <div class="nav-row">
+    <a class="brand" href="/index.html">
+      <img src="/logo-peru.png" alt="IAEG Peru logo">
+      <span class="brand-text">{{ site.name }}<span>{{ site.tagline }}</span></span>
+    </a>
+    <div class="nav-right">
+      <a class="intl-link" href="https://iaeg.info" target="_blank" rel="noopener" title="International Association for Engineering Geology and the Environment">
+        <img src="/logo-iaeg.png" alt="IAEG International logo">
+        <span>IAEG International</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav.primary').classList.toggle('open')">&#9776;</button>
+      <nav class="primary">
+        <ul>
+          {% for item in site.menu %}
+          <li><a href="{{ item.url }}"{% if item.url == page.url %} class="active"{% endif %}>{{ item.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </div>
 </header>

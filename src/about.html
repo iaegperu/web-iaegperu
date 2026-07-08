@@ -1,37 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us — IAEG Peru</title>
-<link rel="icon" href="IAEG New Logo (1).png">
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-<header class="site">
-  <div class="nav-row">
-    <a class="brand" href="index.html">
-      <img src="IAEG New Logo (1).png" alt="IAEG Peru logo">
-      <span class="brand-text">IAEG Peru<span>Engineering Geology · Peruvian Group</span></span>
-    </a>
-    <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav.primary').classList.toggle('open')">&#9776;</button>
-    <nav class="primary">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About Us</a></li>
-        <li><a href="our-projects.html">Projects</a></li>
-        <li><a href="portfolio-our-committees.html">Committees</a></li>
-        <li><a href="ourpartners.html">Partners</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="events.html">Events</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<div class="strata"></div>
-
-<section class="page-head">
+---
+layout: layout.njk
+title: About Us
+---
+<section class="page-head has-photo" style="background-image:url('https://images.squarespace-cdn.com/content/v1/684b8db39007506c920bdb83/1770980983117-7DH67DLBWOQD0UB1A5AA/unsplash-image-v1nLZZfQ-d8.jpg');">
   <div class="wrap">
     <p class="eyebrow">About us</p>
     <h1>Building the practice of engineering geology in Peru</h1>
@@ -48,7 +19,7 @@
         <p>We bring together students, researchers, and practicing engineers who study how geology shapes infrastructure, mining, and the built environment across Peru. Our work spans fieldwork, technical exchange, and public outreach.</p>
         <p>As the Peruvian Group of the International Association for Engineering Geology and the Environment (IAEG), we align local practice with international standards while staying rooted in the specific challenges of Peru's terrain — from Andean slopes to coastal urban growth.</p>
       </div>
-      <img src="Modern Minimalist Building.jpg" alt="Modern building structure" style="height:100%;object-fit:cover;">
+      <img src="https://images.squarespace-cdn.com/content/v1/684b8db39007506c920bdb83/4fa3fffa-ec24-4b9e-b319-884b7efdd842/unsplash-image-8A20jyWomIo.jpg" alt="IAEG Peru fieldwork" style="height:100%;object-fit:cover;">
     </div>
   </div>
 </section>
@@ -92,46 +63,12 @@
       <h2>Supporting the next generation</h2>
     </div>
     <div class="grid cols-2">
-      <img src="Graduate Fellowship Awards.jpg" alt="Graduate Fellowship Awards">
+      <img src="/Graduate Fellowship Awards.jpg" alt="Graduate Fellowship Awards">
       <div>
         <h3>Graduate Fellowship Awards</h3>
         <p>Each year, IAEG Peru recognizes outstanding graduate research in engineering geology, supporting the students carrying the field forward.</p>
-        <a class="btn ghost" href="events.html">See related events &rarr;</a>
+        <a class="btn ghost" href="/events.html">See related events &rarr;</a>
       </div>
     </div>
   </div>
 </section>
-
-<footer class="site">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <h4>IAEG Peru</h4>
-        <p style="color:var(--stone);opacity:.85;max-width:38ch;">Part of a global network advancing engineering geology through innovation, sustainability, and ethical practice.</p>
-      </div>
-      <div>
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="our-projects.html">Projects</a></li>
-          <li><a href="portfolio-our-committees.html">Committees</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Connect</h4>
-        <ul>
-          <li><a href="ourpartners.html">Partners</a></li>
-          <li><a href="news.html">News</a></li>
-          <li><a href="events.html">Events</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 IAEG Peru — Peruvian Group.</span>
-      <span>iaegperu.org</span>
-    </div>
-  </div>
-</footer>
-
-</body>
-</html>

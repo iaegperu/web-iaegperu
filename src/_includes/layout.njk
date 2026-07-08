@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }} | {{ site.name }}</title>
-  <link rel="stylesheet" href="/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title }} — {{ site.name }}</title>
+{% if description %}<meta name="description" content="{{ description }}">{% endif %}
+<link rel="icon" href="/logo-peru.png">
+<link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  {% include "header.njk" %}
 
-  <main>
-    {{ content | safe }}
-  </main>
+{% include "header.njk" %}
+<div class="strata"></div>
 
-  {% include "footer.njk" %}
+{{ content | safe }}
+
+{% include "footer.njk" %}
+
 </body>
 </html>
