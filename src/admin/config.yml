@@ -4,10 +4,8 @@ backend:
   branch: main                      # branch Decap CMS will edit
   base_url: https://cms-oauth-steel.vercel.app   # your OAuth gateway on Vercel
   auth_endpoint: auth               # route exposed by the gateway
-
 media_folder: "src/assets/images"
 public_folder: "/assets/images"
-
 collections:
   - name: "news"
     label: "News (Posts)"           
@@ -27,7 +25,6 @@ collections:
         media_folder: "src/assets/documents"
         public_folder: "/assets/documents"
       - { label: "Body", name: "body", widget: "markdown" }
-
   - name: "pages"
     label: "Site pages"             
     label_singular: "Page"
@@ -38,28 +35,32 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string", required: false }
           - { label: "Content", name: "body", widget: "markdown", required: false }
-
       - label: "About Us"           
         name: "about"
         file: "src/about.html"
         fields:
           - { label: "Title", name: "title", widget: "string", required: false }
           - { label: "Content", name: "body", widget: "markdown", required: false }
-
       - label: "Projects"           
         name: "projects_page"
         file: "src/projects.html"   # <-- Ruta simplificada
         fields:
-          - { label: "Title", name: "title", widget: "string", required: false }
-          - { label: "Content", name: "body", widget: "markdown", required: false }
-
+          - { label: "Title", name: "title", widget: "string" }
+          - label: "Project List"
+            name: "projects"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Status", name: "status", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Description", name: "description", widget: "text" }
       - label: "Committees"         
         name: "committees_page"
         file: "src/committees.html" # <-- Ruta simplificada
         fields:
           - { label: "Title", name: "title", widget: "string", required: false }
           - { label: "Content", name: "body", widget: "markdown", required: false }
-
       - label: "Partners"           
         name: "partners_page"
         file: "src/partners.html"   # <-- Ruta simplificada
@@ -76,14 +77,12 @@ collections:
               - { label: "Button label", name: "buttonLabel", widget: "string", default: "Website" }
               - { label: "Button link", name: "buttonUrl", widget: "string", required: false }
               - { label: "MoU link", name: "mouUrl", widget: "string", required: false }
-
       - label: "News"               
         name: "news_page"
         file: "src/news.html"
         fields:
           - { label: "Title", name: "title", widget: "string", required: false }
           - { label: "Content/Intro", name: "body", widget: "markdown", required: false }
-
       - label: "Events"             
         name: "events_page"
         file: "src/events.html"

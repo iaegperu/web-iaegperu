@@ -2,36 +2,24 @@
 layout: layout.njk
 title: Projects
 projects:
-  - title: "Annual Field Trek"
-    status: "Ongoing"
-    image: "/Annual Field Trek_ Rocky Mountains.jpg"
-    description: "A multi-day expedition through mountain terrain, mapping rock formations and slope conditions with students and mentors side by side."
-  - title: "Laboratory Partnership Program"
-    status: "New"
-    image: "/New Laboratory Partnership.jpg"
-    description: "Joint access agreements with partner labs, giving members hands-on testing experience beyond the classroom."
-  - title: "Community Outreach"
-    status: "Community"
-    image: "/Community Outreach.jpg"
-    description: "Working with local communities near infrastructure and mining sites to share geological risk awareness in plain terms."
-  - title: "Mineralogy Workshops"
-    status: "Education"
-    image: "/Mineralogy Workshop.jpg"
-    description: "Recurring hands-on sessions covering mineral identification and rock classification for members at every level."
-  - title: "Ground Conditions Studies"
-    status: "Research"
-    image: "https://images.squarespace-cdn.com/content/v1/684b8db39007506c920bdb83/1751853663705-L1AV7MB80O1MWEFESJAB/unsplash-image-8Jbo0T-DxUI.jpg"
-    description: "Applied research linking subsurface conditions to structural design decisions on real infrastructure projects."
-  - title: "Geoscience Expo Participation"
-    status: "Outreach"
-    image: "/Geoscience Expo 2026.jpg"
-    description: "Annual presence at the national geoscience exhibition, presenting member research to the wider public."
+  - title: "The Peruvian Geotechnical Biennial"
+    status: "Every 2 years"
+    image: "http://static1.squarespace.com/static/684b8db39007506c920bdb83/6864ad3b3eb2a906716bda15/6864ad3b3eb2a906716bda16/1757313836530/unsplash-image-xnCTIrrZhY0.jpg?format=1500w"
+    description: "A national event led by IAEG Peru, held every two years, bringing together students, professionals, and institutions to advance geotechnical knowledge and support disaster risk reduction across Peru and Latin America."
+  - title: "The Peruvian Olympiad in Geosciences"
+    status: "4th Edition - Ongoing"
+    image: "http://static1.squarespace.com/static/684b8db39007506c920bdb83/6864ad3b3eb2a906716bda15/6864ad3b3eb2a906716bda1a/1757313852904/unsplash-image-PBB5nBrlFiA.jpg?format=1500w"
+    description: "A national educational initiative founded in 2021 that trains high school students and selects Peru's representatives for the International Earth Science Olympiad, with a focus on underserved regions."
+  - title: "\"Peruvian Women in Geosciences\" forums"
+    status: "Annual"
+    image: "http://static1.squarespace.com/static/684b8db39007506c920bdb83/6864ad3b3eb2a906716bda15/6864ad3b3eb2a906716bda1c/1757313863880/unsplash-image-LjqARJaJotc.jpg?format=1500w"
+    description: "Annual forums running since 2021, now led by WEG Peru, bringing together the voices and experiences of women across the geosciences to foster mentorship and inclusion."
 ---
 <section class="page-head">
   <div class="wrap">
     <p class="eyebrow">Projects</p>
     <h1>Fieldwork that grounds the theory</h1>
-    <p class="lead" style="max-width:60ch;">From Andean field treks to laboratory partnerships, our projects give students and professionals direct experience with Peru's geology.</p>
+    <p class="lead" style="max-width:60ch;">From technical events to community outreach, our projects give students and professionals direct experience with Peru's geology.</p>
   </div>
 </section>
 
@@ -42,9 +30,9 @@ projects:
       <!-- Este bucle genera automáticamente todas las tarjetas usando la lista de arriba -->
       {% for p in projects %}
       <div class="card">
-        <img src="{{ p.image }}" alt="{{ p.title }}">
+        {% if p.image %}<img src="{{ p.image }}" alt="{{ p.title }}">{% endif %}
         <div class="body">
-          <div class="meta">{{ p.status }}</div>
+          {% if p.status %}<div class="meta">{{ p.status }}</div>{% endif %}
           <h3>{{ p.title }}</h3>
           <p>{{ p.description }}</p>
         </div>
