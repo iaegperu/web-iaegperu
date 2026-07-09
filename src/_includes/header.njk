@@ -13,7 +13,22 @@
       <nav class="primary">
         <ul>
           {% for item in site.menu %}
-          <li><a href="{{ item.url }}"{% if item.url == page.url %} class="active"{% endif %}>{{ item.name }}</a></li>
+            {% if item.children %}
+              <!-- Si el elemento tiene subpáginas (como About Us) -->
+              <li class="dropdown">
+                <a href="{{ item.url }}" class="dropdown-toggle {% if item.url == page.url %}active{% endif %}">
+                  {{ item.name }} ▾
+                </a>
+                <ul class="dropdown-menu">
+                  {% for child in item.children %}
+                    <li><a href="{{ child.url }}">{{ child.name }}</a></li>
+                  {% endfor %}
+                </ul>
+              </li>
+            {% else %}
+              <!-- Si es un botón normal del menú -->
+              <li><a href="{{ item.url }}"{% if item.url == page.url %} class="active"{% endif %}>{{ item.name }}</a></li>
+            {% endif %}
           {% endfor %}
         </ul>
       </nav>
