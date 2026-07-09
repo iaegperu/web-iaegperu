@@ -88,4 +88,17 @@ collections:
         file: "src/events.html"
         fields:
           - { label: "Title", name: "title", widget: "string", required: false }
-          - { label: "Content", name: "body", widget: "markdown", required: false }
+          - label: "Event List"
+            name: "events"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Date label (short, for the badge)", name: "dateLabel", widget: "string", hint: "e.g. SEP 2-4, 2026" }
+              - { label: "Full date/time", name: "dateFull", widget: "string", required: false }
+              - { label: "Location", name: "location", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Event link (View Event button)", name: "eventUrl", widget: "string", required: false }
+              - { label: "Image", name: "image", widget: "image", required: false }
+          - { label: "International events note", name: "internationalNote", widget: "text", required: false }
+          - { label: "International events link", name: "internationalUrl", widget: "string", required: false }

@@ -1,6 +1,51 @@
 ---
 layout: layout.njk
 title: Events
+events:
+  - title: "2nd Peruvian Biennial on Geotechnics"
+    dateLabel: "SEP 2-4, 2026"
+    dateFull: "Wed, 2 Sept 2026, 17:30 – Fri, 4 Sept 2026, 18:30"
+    location: "Lima, Peru"
+    description: "2nd Peruvian Biennial on Geotechnics (September, 2026)."
+    eventUrl: "https://iaegperu.org/events/2nd-peruvian-getechnical-biennial"
+    image: ""
+  - title: "Slope Stability 2026"
+    dateLabel: "OCT 26-29, 2026"
+    dateFull: "Mon, 26 Oct 2026, 02:30 – Thu, 29 Oct 2026, 03:30"
+    location: "Lima Convention Center, Lima, Peru"
+    description: "The Slope Stability 2026 Symposium brings together global experts in geotechnical engineering and slope stability to share advances, case studies, and innovative technologies, with emphasis on challenges relevant to Latin America and the Caribbean. Organized by LOP with the support of national and international organizations, including IAEG Peru."
+    eventUrl: "https://iaegperu.org/events/slope-stability-2026"
+    image: ""
+  - title: "\"6th Talk Series: Peruvian Women in Geosciences\""
+    dateLabel: "MAR 21, 2026"
+    dateFull: "Saturday, 21 March 2026, 18:00 – 20:30"
+    location: ""
+    description: "From WEG Peru, a new edition of the talk series that highlights, inspires, and connects women who are transforming engineering geology, environmental engineering, and the geosciences in Peru."
+    eventUrl: "https://iaegperu.org/events/peruvianwomeningeosciences"
+    image: ""
+  - title: "IAEG Peru End of the Year Meeting"
+    dateLabel: "DEC 2025"
+    dateFull: "Mon, 1 Dec 2025, 19:30 – Wed, 31 Dec 2025, 20:30"
+    location: ""
+    description: "IAEG Peru End of the Year Meeting (December, 2025)."
+    eventUrl: "https://iaegperu.org/events/event-four-fexsp"
+    image: ""
+  - title: "4th Peruvian Geoscience Olympiad"
+    dateLabel: "OCT 2025"
+    dateFull: "Sun, 5 Oct 2025 – Sat, 11 Oct 2025"
+    location: ""
+    description: "4th Peruvian Geoscience Olympiad (October 2025)."
+    eventUrl: "https://iaegperu.org/events/4pgo"
+    image: ""
+  - title: "Talk on the Peruvian Geologist Day Celebration"
+    dateLabel: "SEP 2025"
+    dateFull: "Wed, 3 Sept 2025 – Tue, 30 Sept 2025"
+    location: ""
+    description: "Talk on the Peruvian Geologist Day Celebration (September, 2025)."
+    eventUrl: "https://iaegperu.org/events/event-three-mb7z7"
+    image: ""
+internationalNote: "Visit the IAEG international website for information about upcoming events across the network."
+internationalUrl: "https://iaeg.info"
 ---
 <section class="page-head has-photo" style="background-image:url('https://images.squarespace-cdn.com/content/v1/684b8db39007506c920bdb83/4fa3fffa-ec24-4b9e-b319-884b7efdd842/unsplash-image-8A20jyWomIo.jpg');">
   <div class="wrap">
@@ -12,42 +57,30 @@ title: Events
 
 <section>
   <div class="wrap">
+    <p class="eyebrow">National Events</p>
 
+    <!-- Este bucle genera automáticamente cada evento usando la lista editable de arriba -->
+    {% for e in events %}
     <div class="timeline-item">
-      <div class="when"><strong>Mar</strong>15</div>
+      <div class="when"><strong>{{ e.dateLabel }}</strong></div>
       <div>
-        <h3>Mineralogy Workshop</h3>
-        <p>A hands-on session covering mineral identification and rock classification, open to members at every level.</p>
-        <img src="/Mineralogy Workshop.jpg" alt="Mineralogy Workshop" style="margin-top:14px;max-height:260px;object-fit:cover;">
+        <h3>{{ e.title }}</h3>
+        {% if e.dateFull %}<p><strong>{{ e.dateFull }}</strong></p>{% endif %}
+        {% if e.location %}<p>{{ e.location }}</p>{% endif %}
+        <p>{{ e.description }}</p>
+        {% if e.image %}<img src="{{ e.image }}" alt="{{ e.title }}" style="margin-top:14px;max-height:260px;object-fit:cover;">{% endif %}
+        {% if e.eventUrl %}<p><a class="btn" href="{{ e.eventUrl }}">View Event &rarr;</a></p>{% endif %}
       </div>
     </div>
+    {% endfor %}
 
-    <div class="timeline-item">
-      <div class="when"><strong>Jun</strong>08</div>
-      <div>
-        <h3>Annual Field Trek</h3>
-        <p>Our flagship multi-day expedition through mountain terrain, mapping rock formations and slope conditions with students and mentors.</p>
-        <img src="/Annual Field Trek_ Rocky Mountains.jpg" alt="Annual Field Trek" style="margin-top:14px;max-height:260px;object-fit:cover;">
-      </div>
-    </div>
+  </div>
+</section>
 
-    <div class="timeline-item">
-      <div class="when"><strong>Sep</strong>22</div>
-      <div>
-        <h3>Geoscience Expo 2026</h3>
-        <p>IAEG Peru presents member research and engages with students at the national geoscience exhibition.</p>
-        <img src="/Geoscience Expo 2026.jpg" alt="Geoscience Expo 2026" style="margin-top:14px;max-height:260px;object-fit:cover;">
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="when"><strong>Nov</strong>10</div>
-      <div>
-        <h3>Graduate Fellowship Awards Ceremony</h3>
-        <p>Recognizing the year's outstanding graduate research in engineering geology from across Peru.</p>
-        <img src="/Graduate Fellowship Awards.jpg" alt="Graduate Fellowship Awards" style="margin-top:14px;max-height:260px;object-fit:cover;">
-      </div>
-    </div>
-
+<section class="alt">
+  <div class="wrap" style="text-align:center;">
+    <p class="eyebrow" style="justify-content:center;">International Events</p>
+    <p style="max-width:60ch;margin:0 auto 20px;">{{ internationalNote }}</p>
+    {% if internationalUrl %}<a class="btn" href="{{ internationalUrl }}">Visit IAEG International &rarr;</a>{% endif %}
   </div>
 </section>
