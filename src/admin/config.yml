@@ -1,20 +1,18 @@
 backend:
   name: github
-  repo: iaegperu/web-iaegperu       # exact owner/repo on GitHub
+  repo: iaegperu/web-iaegperu       # owner/repo on GitHub
   branch: main                      # branch Decap CMS will edit
   base_url: https://cms-oauth-steel.vercel.app   # your OAuth gateway on Vercel
   auth_endpoint: auth               # route exposed by the gateway
-# Uncomment this line only while testing locally (npx decap-server), it skips
-# real login. Remove/comment it out before using this in production.
-# local_backend: true
-# Default location for images uploaded through the image widget
+
 media_folder: "src/assets/images"
 public_folder: "/assets/images"
+
 collections:
   - name: "news"
-    label: "News"
+    label: "News (Posts)"           
     label_singular: "News item"
-    folder: "src/news"              # matches the migrated posts + directory data file
+    folder: "src/news"              
     create: true
     slug: "{{slug}}"
     fields:
@@ -29,31 +27,42 @@ collections:
         media_folder: "src/assets/documents"
         public_folder: "/assets/documents"
       - { label: "Body", name: "body", widget: "markdown" }
+
   - name: "pages"
-    label: "Site pages"
+    label: "Site pages"             
     label_singular: "Page"
     files:
-      - label: "Homepage"
+      - label: "Home"               
         name: "home"
-        file: "src/index.html"      # ADJUST field names to match your actual HTML/template structure
+        file: "src/index.html"      
         fields:
           - { label: "Title", name: "title", widget: "string", required: false }
           - { label: "Content", name: "body", widget: "markdown", required: false }
-      - label: "About"
+
+      - label: "About Us"           
         name: "about"
         file: "src/about.html"
         fields:
           - { label: "Title", name: "title", widget: "string", required: false }
           - { label: "Content", name: "body", widget: "markdown", required: false }
-      - label: "Events"
-        name: "events"
-        file: "src/events.html"
+
+      - label: "Projects"           
+        name: "projects_page"
+        file: "src/projects.html"   # <-- Ruta simplificada
         fields:
           - { label: "Title", name: "title", widget: "string", required: false }
           - { label: "Content", name: "body", widget: "markdown", required: false }
-      - label: "Partners"
+
+      - label: "Committees"         
+        name: "committees_page"
+        file: "src/committees.html" # <-- Ruta simplificada
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: false }
+          - { label: "Content", name: "body", widget: "markdown", required: false }
+
+      - label: "Partners"           
         name: "partners_page"
-        file: "src/ourpartners.html"
+        file: "src/partners.html"   # <-- Ruta simplificada
         fields:
           - { label: "Title", name: "title", widget: "string", required: false }
           - label: "Partner organizations"
@@ -62,28 +71,22 @@ collections:
             summary: "{{fields.name}}"
             fields:
               - { label: "Name", name: "name", widget: "string" }
-              - label: "Logo"
-                name: "logo"
-                widget: "image"
-                required: false
-                hint: "Upload the organization's logo. Leave empty and it will show a 'Logo pending' placeholder."
-              - label: "Short description"
-                name: "description"
-                widget: "text"
-                required: false
-                hint: "Optional. Leave blank if you don't want a paragraph on the card."
-              - label: "Button label"
-                name: "buttonLabel"
-                widget: "string"
-                default: "Website"
-                hint: "e.g. Website, Blog, or the organization's full name."
-              - label: "Button link"
-                name: "buttonUrl"
-                widget: "string"
-                required: false
-                hint: "Leave empty until you have the link — the button will show as pending."
-              - label: "MoU link"
-                name: "mouUrl"
-                widget: "string"
-                required: false
-                hint: "Optional. Leave empty until the MoU is signed and uploaded — the 'View MoU' button only appears once this is filled in."
+              - { label: "Logo", name: "logo", widget: "image", required: false }
+              - { label: "Short description", name: "description", widget: "text", required: false }
+              - { label: "Button label", name: "buttonLabel", widget: "string", default: "Website" }
+              - { label: "Button link", name: "buttonUrl", widget: "string", required: false }
+              - { label: "MoU link", name: "mouUrl", widget: "string", required: false }
+
+      - label: "News"               
+        name: "news_page"
+        file: "src/news.html"
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: false }
+          - { label: "Content/Intro", name: "body", widget: "markdown", required: false }
+
+      - label: "Events"             
+        name: "events_page"
+        file: "src/events.html"
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: false }
+          - { label: "Content", name: "body", widget: "markdown", required: false }
