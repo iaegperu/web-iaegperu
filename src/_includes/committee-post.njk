@@ -1,0 +1,13 @@
+---
+layout: layout.njk
+---
+<article class="wrap post">
+  <p class="post-back"><a href="/committees.html">&larr; Back to Committees</a></p>
+  <h1>{{ title }}</h1>
+  {% if image %}
+  <img class="post-hero" src="{{ image }}" alt="{{ title }}">
+  {% endif %}
+  <div class="post-body">
+    {{ content | safe }}
+  </div>
+</article>

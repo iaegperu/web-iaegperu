@@ -25,6 +25,17 @@ collections:
         media_folder: "src/assets/documents"
         public_folder: "/assets/documents"
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "committees"
+    label: "Committees (Posts)"
+    label_singular: "Committee"
+    folder: "src/committees"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Short summary (shown on Committees page)", name: "summary", widget: "text", required: false }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
   - name: "pages"
     label: "Site pages"             
     label_singular: "Page"
@@ -55,12 +66,6 @@ collections:
               - { label: "Status", name: "status", widget: "string" }
               - { label: "Image", name: "image", widget: "image" }
               - { label: "Description", name: "description", widget: "text" }
-      - label: "Committees"         
-        name: "committees_page"
-        file: "src/committees.html" # <-- Ruta simplificada
-        fields:
-          - { label: "Title", name: "title", widget: "string", required: false }
-          - { label: "Content", name: "body", widget: "markdown", required: false }
       - label: "Partners"           
         name: "partners_page"
         file: "src/partners.html"   # <-- Ruta simplificada
@@ -102,3 +107,8 @@ collections:
               - { label: "Image", name: "image", widget: "image", required: false }
           - { label: "International events note", name: "internationalNote", widget: "text", required: false }
           - { label: "International events link", name: "internationalUrl", widget: "string", required: false }
+      - label: "Committees"
+        name: "committees_page"
+        file: "src/committees.html"
+        fields:
+          - { label: "Title", name: "title", widget: "string", required: false }

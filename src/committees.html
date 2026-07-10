@@ -1,42 +1,32 @@
 ---
 layout: layout.njk
 title: Committees
+description: The working groups behind IAEG Peru
 ---
 <section class="page-head has-photo" style="background-image:url('https://images.squarespace-cdn.com/content/v1/684b8db39007506c920bdb83/1770980983117-7DH67DLBWOQD0UB1A5AA/unsplash-image-v1nLZZfQ-d8.jpg');">
   <div class="wrap">
     <p class="eyebrow">Committees</p>
     <h1>The working groups behind IAEG Peru</h1>
-    <p class="lead" style="max-width:60ch;">Each committee focuses on a specific part of our mission — from education to technical standards — led by members who volunteer their time and expertise.</p>
+    <p class="lead" style="max-width:60ch;">IAEG Peru is supported by a number of specialized committees aligned with the strategic priorities of the International Association for Engineering Geology and the Environment. Each one leads national projects and initiatives across Peru and Latin America.</p>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-
-    <div class="committee">
-      <div class="code">CM&nbsp;01</div>
-      <div>
-        <h3>Education &amp; Outreach Committee</h3>
-        <p>Organizes workshops, field treks, and public engagement activities — including our presence at the Geoscience Expo — to bring engineering geology to students and the wider community.</p>
-      </div>
+    <div class="news-grid">
+      <!-- Esta lista se genera sola a partir de cada archivo en src/committees/ -->
+      {% for c in collections.committees %}
+      <a class="news-card" href="{{ c.url }}">
+        {% if c.data.image %}
+        <img src="{{ c.data.image }}" alt="{{ c.data.title }}">
+        {% endif %}
+        <div class="news-card-body">
+          <h3>{{ c.data.title }}</h3>
+          <p>{{ c.data.summary }}</p>
+        </div>
+      </a>
+      {% endfor %}
     </div>
-
-    <div class="committee">
-      <div class="code">CM&nbsp;02</div>
-      <div>
-        <h3>Technical Standards Committee</h3>
-        <p>Reviews and aligns local practice with international IAEG guidelines, supporting members on ground investigation and reporting standards.</p>
-      </div>
-    </div>
-
-    <div class="committee">
-      <div class="code">CM&nbsp;03</div>
-      <div>
-        <h3>Research &amp; Fellowship Committee</h3>
-        <p>Coordinates the Graduate Fellowship Awards and supports member research through laboratory partnerships and mentorship.</p>
-      </div>
-    </div>
-
   </div>
 </section>
 
