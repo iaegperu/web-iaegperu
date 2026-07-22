@@ -15,7 +15,7 @@ heroCtaLabel2: "Upcoming events"
 heroCtaUrl2: "/events.html"
 
 statsCommitteesLabel: "Active Committees"
-statsPartners: "12+"
+statsPartnersSuffix: "+"
 statsPartnersLabel: "Partner Institutions"
 statsFounded: "2026"
 statsFoundedLabel: "Founded"
@@ -24,18 +24,21 @@ whatWeDoEyebrow: "What we do"
 whatWeDoTitle: "A community built on fieldwork, research, and mentorship"
 whatWeDoCards:
   - image: "/Annual Field Trek_ Rocky Mountains.jpg"
+    livePreview: true
     tag: "Projects"
     title: "Field research programs"
     text: "Applied projects that connect students and professionals with real geological terrain across Peru."
     linkText: "See projects"
     linkUrl: "/projects.html"
   - image: "/Community Outreach.jpg"
+    livePreview: true
     tag: "Committees"
     title: "Working committees"
     text: "Focused groups driving education, outreach, and technical standards within the association."
     linkText: "Meet committees"
     linkUrl: "/committees.html"
   - image: "/New Laboratory Partnership.jpg"
+    livePreview: true
     tag: "Partners"
     title: "Institutional partners"
     text: "Universities, laboratories, and firms collaborating to strengthen the practice across Peru."
@@ -75,7 +78,7 @@ latestCards:
 
 <div class="stats wrap" style="max-width:1120px;margin:0 auto;">
   <div class="stat"><div class="num">{{ collections.committees.length }}</div><div class="label">{{ statsCommitteesLabel }}</div></div>
-  <div class="stat"><div class="num">{{ statsPartners }}</div><div class="label">{{ statsPartnersLabel }}</div></div>
+  <div class="stat"><div class="num">{{ collections.partnersPage[0].data.partners.length }}{{ statsPartnersSuffix }}</div><div class="label">{{ statsPartnersLabel }}</div></div>
   <div class="stat"><div class="num">{{ statsFounded }}</div><div class="label">{{ statsFoundedLabel }}</div></div>
 </div>
 
@@ -88,7 +91,13 @@ latestCards:
     <div class="grid cols-3">
       {% for card in whatWeDoCards %}
       <div class="card">
-        {% if card.image %}<img src="{{ card.image }}" alt="{{ card.title }}">{% endif %}
+        {% if card.livePreview %}
+        <div class="page-thumb">
+          <iframe src="{{ card.linkUrl }}" title="{{ card.title }} preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+        </div>
+        {% elif card.image %}
+        <img src="{{ card.image }}" alt="{{ card.title }}">
+        {% endif %}
         <div class="body">
           <div class="meta">{{ card.tag }}</div>
           <h3>{{ card.title }}</h3>

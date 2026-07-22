@@ -57,7 +57,7 @@ collections:
           - { label: "Hero — Button 2 link", name: "heroCtaUrl2", widget: "string" }
 
           - { label: "Stats — \"Active Committees\" label (number is automatic)", name: "statsCommitteesLabel", widget: "string" }
-          - { label: "Stats — Partner Institutions number", name: "statsPartners", widget: "string" }
+          - { label: "Stats — Partner Institutions suffix (e.g. \"+\") — the number itself is automatic", name: "statsPartnersSuffix", widget: "string", required: false }
           - { label: "Stats — Partner Institutions label", name: "statsPartnersLabel", widget: "string" }
           - { label: "Stats — Founded year", name: "statsFounded", widget: "string" }
           - { label: "Stats — Founded label", name: "statsFoundedLabel", widget: "string" }
@@ -70,6 +70,7 @@ collections:
             summary: "{{fields.title}}"
             fields:
               - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Use live preview of destination page instead of image? (recommended — always accurate)", name: "livePreview", widget: "boolean", default: false }
               - { label: "Tag (small label)", name: "tag", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Text", name: "text", widget: "text" }

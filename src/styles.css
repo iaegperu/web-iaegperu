@@ -69,7 +69,7 @@ padding: 16px 32px; max-width: 1120px; margin: 0 auto;
 }
 .nav-right { display: flex; align-items: center; gap: 20px; }
 .brand { display: flex; align-items: center; gap: 12px; }
-.brand img { height: 40px; width: auto; }
+.brand img { height: 56px; width: auto; }
 
 /* Brand text switches to dark blue for readability on light header */
 .brand-text { font-family: var(--serif); font-weight: 600; font-size: 1.05rem; letter-spacing: .01em; color: var(--azul-oscuro); }
@@ -81,7 +81,7 @@ display: flex; align-items: center; gap: 8px;
 padding-left: 16px; margin-left: 4px; border-left: 1px solid rgba(10, 31, 51, 0.06);
 flex-shrink: 0;
 }
-.intl-link img { height: 26px; width: auto; opacity: .95; transition: opacity .15s; }
+.intl-link img { height: 36px; width: auto; opacity: .95; transition: opacity .15s; }
 .intl-link span { font-family: var(--mono); font-size: .66rem; letter-spacing: .06em; text-transform: uppercase; color: rgba(10, 31, 51, 0.75); line-height: 1.2; max-width: 9ch; }
 .intl-link:hover img { opacity: 1; }
 @media (max-width: 960px) { .intl-link span { display: none; } .intl-link { padding-left: 10px; } }
@@ -407,4 +407,32 @@ left: 0;
 top: 0;
 color: var(--dorado);
 font-weight: 700;
+}
+
+/* ---------- Live page-preview thumbnail (iframe scaled down) ---------- */
+/* Shows a live, always-accurate mini preview of another page on the same
+   site instead of a static image. Updates automatically when that page's
+   content changes — no manual screenshots needed. */
+.page-thumb {
+position: relative;
+width: 100%;
+height: 210px;
+overflow: hidden;
+background: var(--gris-claro);
+}
+.page-thumb iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 400%;
+height: 400%;
+border: 0;
+transform: scale(0.25);
+transform-origin: top left;
+pointer-events: none;
+}
+.page-thumb::after {
+content: "";
+position: absolute;
+inset: 0;
 }
