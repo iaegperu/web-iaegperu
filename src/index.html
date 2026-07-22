@@ -63,6 +63,22 @@ latestEyebrow: Latest
 layout: layout.njk
 latestTitle: News & upcoming events
 latestCards:
+<<<<<<< HEAD
+  - image: "/Geoscience Expo 2026.jpg"
+    livePreview: true
+    tag: "News"
+    title: "Joining Efforts with CGECC to Organize the next Olympiad"
+    text: "A look at the association's participation in this year's national geoscience exhibition."
+    linkText: "Read the news"
+    linkUrl: "/news.html"
+  - image: "/Mineralogy Workshop.jpg"
+    livePreview: true
+    tag: "Event"
+    title: "Mineralogy Workshop"
+    text: "Hands-on sessions for students and early-career professionals, open to all members."
+    linkText: "See event details"
+    linkUrl: "/events.html"
+=======
   - image: /Geoscience Expo 2026.jpg
     tag: News
     title: Joining Efforts with CGECC to Organize the next Olympiad
@@ -76,6 +92,7 @@ latestCards:
       members.
     linkText: See event details
     linkUrl: /events.html
+>>>>>>> 54f3e8ae469fe36a138a659156cadfe3e125ab5e
 ---
 <section class="hero">
   <div class="wrap">
@@ -135,7 +152,13 @@ latestCards:
     <div class="grid cols-2">
       {% for card in latestCards %}
       <div class="card">
-        {% if card.image %}<img src="{{ card.image }}" alt="{{ card.title }}">{% endif %}
+        {% if card.livePreview %}
+        <div class="page-thumb">
+          <iframe src="{{ card.linkUrl }}" title="{{ card.title }} preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+        </div>
+        {% elif card.image %}
+        <img src="{{ card.image }}" alt="{{ card.title }}">
+        {% endif %}
         <div class="body">
           <div class="meta">{{ card.tag }}</div>
           <h3>{{ card.title }}</h3>

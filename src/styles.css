@@ -81,7 +81,7 @@ display: flex; align-items: center; gap: 8px;
 padding-left: 16px; margin-left: 4px; border-left: 1px solid rgba(10, 31, 51, 0.06);
 flex-shrink: 0;
 }
-.intl-link img { height: 36px; width: auto; opacity: .95; transition: opacity .15s; }
+.intl-link img { height: 52px; width: auto; opacity: .95; transition: opacity .15s; }
 .intl-link span { font-family: var(--mono); font-size: .66rem; letter-spacing: .06em; text-transform: uppercase; color: rgba(10, 31, 51, 0.75); line-height: 1.2; max-width: 9ch; }
 .intl-link:hover img { opacity: 1; }
 @media (max-width: 960px) { .intl-link span { display: none; } .intl-link { padding-left: 10px; } }
