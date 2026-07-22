@@ -1,11 +1,10 @@
 ---
-title: new strategic alliance for improving the geosciences education quality
+title: New strategic alliance for improving the geosciences education quality
   and in Peru!
 date: yyyy-07-We
+image: /assets/images/new-mou-2026.jpg
 ---
-We announce a new strategic alliance for education and geosciences in Peru!
-We are pleased to share that the Peruvian IAEG Group has signed a Memorandum of Understanding with the Centro de Investigación en Geociencias y Cambio Climático - CIGECC 
-This strategic collaboration unites the efforts of both institutions with the main objective of strengthening the organization of the Peruvian Geosciences Olympiad and promoting science education in our country, under a firmly inclusive and sustainable approach.
+We are pleased to share that we have signed a Memorandum of Understanding with the Centro de Investigación en Geociencias y Cambio Climático - CIGECC. This strategic collaboration unites the efforts of both institutions with the main objective of strengthening the organization of the Peruvian Geosciences Olympiad and promoting science education in our country, under a firmly inclusive and sustainable approach.
 Through this alliance, we will seek to promote:
 🌱 Greater reach: Bring Geoscience literacy to more regions of the country.
 🧠 Mentoring and training: Promote the development of young talent and provide key tools to teachers.
