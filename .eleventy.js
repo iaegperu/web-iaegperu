@@ -16,6 +16,13 @@ module.exports = function (eleventyConfig) {
   // won't copy it unless we tell it to explicitly.
   eleventyConfig.addPassthroughCopy("src/admin/config.yml");
 
+  // Explicit "committees" collection — one entry per file in src/committees/.
+  // Used on the Home page to show a live, always-accurate committee count
+  // (e.g. "{{ collections.committees.length }}") instead of a hardcoded number.
+  eleventyConfig.addCollection("committees", (collectionApi) => {
+    return collectionApi.getFilteredByGlob("src/committees/*.md");
+  });
+
   // Formats a date like "January 15, 2026" for news posts
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     if (!dateObj) return "";
@@ -37,3 +44,4 @@ module.exports = function (eleventyConfig) {
     htmlTemplateEngine: "njk",
   };
 };
+
