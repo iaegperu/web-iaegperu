@@ -1,7 +1,7 @@
 ---
 title: New strategic alliance for improving the geosciences education quality
   and in Peru!
-date: 2026-07-12h
+date: yyyy-07-We
 image: /assets/images/new-mou-2026.jpg
 ---
 We are pleased to share that we have signed a Memorandum of Understanding with the Centro de Investigación en Geociencias y Cambio Climático - CIGECC. This strategic collaboration unites the efforts of both institutions with the main objective of strengthening the organization of the Peruvian Geosciences Olympiad and promoting science education in our country, under a firmly inclusive and sustainable approach.
