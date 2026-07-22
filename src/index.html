@@ -3,62 +3,100 @@ layout: layout.njk
 title: Home
 description: IAEG Peru is part of a global network dedicated to advancing
   engineering geology through innovation, sustainability, and ethical practice.
+
+heroEyebrow: "Academic excellence · Professional heritage"
+heroTitle: "Advancing Engineering Geology in Peru"
+heroLead: >
+  IAEG Peru is part of a global network dedicated to advancing engineering geology through innovation, sustainability, and ethical practice. With support from IAPG Peru, we empower Peruvian professionals and students to connect, grow, and lead.
+heroImage: "https://images.squarespace-cdn.com/content/v1/684b8db39007506c920bdb83/1751853663705-L1AV7MB80O1MWEFESJAB/unsplash-image-8Jbo0T-DxUI.jpg"
+heroCtaLabel1: "About the association"
+heroCtaUrl1: "/about.html"
+heroCtaLabel2: "Upcoming events"
+heroCtaUrl2: "/events.html"
+
+statsCommitteesLabel: "Active Committees"
+statsPartners: "12+"
+statsPartnersLabel: "Partner Institutions"
+statsFounded: "2026"
+statsFoundedLabel: "Founded"
+
+whatWeDoEyebrow: "What we do"
+whatWeDoTitle: "A community built on fieldwork, research, and mentorship"
+whatWeDoCards:
+  - image: "/Annual Field Trek_ Rocky Mountains.jpg"
+    tag: "Projects"
+    title: "Field research programs"
+    text: "Applied projects that connect students and professionals with real geological terrain across Peru."
+    linkText: "See projects"
+    linkUrl: "/projects.html"
+  - image: "/Community Outreach.jpg"
+    tag: "Committees"
+    title: "Working committees"
+    text: "Focused groups driving education, outreach, and technical standards within the association."
+    linkText: "Meet committees"
+    linkUrl: "/committees.html"
+  - image: "/New Laboratory Partnership.jpg"
+    tag: "Partners"
+    title: "Institutional partners"
+    text: "Universities, laboratories, and firms collaborating to strengthen the practice across Peru."
+    linkText: "Our partners"
+    linkUrl: "/partners.html"
+
+latestEyebrow: "Latest"
+latestTitle: "News & upcoming events"
+latestCards:
+  - image: "/Geoscience Expo 2026.jpg"
+    tag: "News"
+    title: "Joining Efforts with CGECC to Organize the next Olympiad"
+    text: "A look at the association's participation in this year's national geoscience exhibition."
+    linkText: "Read the news"
+    linkUrl: "/news.html"
+  - image: "/Mineralogy Workshop.jpg"
+    tag: "Event"
+    title: "Mineralogy Workshop"
+    text: "Hands-on sessions for students and early-career professionals, open to all members."
+    linkText: "See event details"
+    linkUrl: "/events.html"
 ---
 <section class="hero">
   <div class="wrap">
-    <p class="eyebrow">Academic excellence &middot; Professional heritage</p>
-    <h1>Advancing Engineering Geology in Peru</h1>
-    <p class="lead">IAEG Peru is part of a global network dedicated to advancing engineering geology through innovation, sustainability, and ethical practice. With support from IAPG Peru, we empower Peruvian professionals and students to connect, grow, and lead.</p>
+    <p class="eyebrow">{{ heroEyebrow }}</p>
+    <h1>{{ heroTitle }}</h1>
+    <p class="lead">{{ heroLead }}</p>
     <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;">
-      <a class="btn" href="/about.html">About the association</a>
-      <a class="btn ghost" href="/events.html">Upcoming events</a>
+      <a class="btn" href="{{ heroCtaUrl1 }}">{{ heroCtaLabel1 }}</a>
+      <a class="btn ghost" href="{{ heroCtaUrl2 }}">{{ heroCtaLabel2 }}</a>
     </div>
     <div class="hero-media">
-      <img src="https://images.squarespace-cdn.com/content/v1/684b8db39007506c920bdb83/1751853663705-L1AV7MB80O1MWEFESJAB/unsplash-image-8Jbo0T-DxUI.jpg" alt="Engineering geology field structure">
+      <img src="{{ heroImage }}" alt="{{ heroTitle }}">
     </div>
   </div>
 </section>
 
 <div class="stats wrap" style="max-width:1120px;margin:0 auto;">
-  <div class="stat"><div class="num">03</div><div class="label">Active Committees</div></div>
-  <div class="stat"><div class="num">12+</div><div class="label">Partner Institutions</div></div>
-  <div class="stat"><div class="num">2026</div><div class="label">Founded</div></div>
+  <div class="stat"><div class="num">{{ collections.committees.length }}</div><div class="label">{{ statsCommitteesLabel }}</div></div>
+  <div class="stat"><div class="num">{{ statsPartners }}</div><div class="label">{{ statsPartnersLabel }}</div></div>
+  <div class="stat"><div class="num">{{ statsFounded }}</div><div class="label">{{ statsFoundedLabel }}</div></div>
 </div>
 
 <section>
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">What we do</p>
-      <h2>A community built on fieldwork, research, and mentorship</h2>
+      <p class="eyebrow">{{ whatWeDoEyebrow }}</p>
+      <h2>{{ whatWeDoTitle }}</h2>
     </div>
     <div class="grid cols-3">
+      {% for card in whatWeDoCards %}
       <div class="card">
-        <img src="/Annual Field Trek_ Rocky Mountains.jpg" alt="Annual field trek">
+        {% if card.image %}<img src="{{ card.image }}" alt="{{ card.title }}">{% endif %}
         <div class="body">
-          <div class="meta">Projects</div>
-          <h3>Field research programs</h3>
-          <p>Applied projects that connect students and professionals with real geological terrain across Peru.</p>
-          <a href="/our-projects.html">See projects &rarr;</a>
+          <div class="meta">{{ card.tag }}</div>
+          <h3>{{ card.title }}</h3>
+          <p>{{ card.text }}</p>
+          <a href="{{ card.linkUrl }}">{{ card.linkText }} &rarr;</a>
         </div>
       </div>
-      <div class="card">
-        <img src="/Community Outreach.jpg" alt="Community outreach">
-        <div class="body">
-          <div class="meta">Committees</div>
-          <h3>Working committees</h3>
-          <p>Focused groups driving education, outreach, and technical standards within the association.</p>
-          <a href="/portfolio-our-committees.html">Meet committees &rarr;</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="/New Laboratory Partnership.jpg" alt="Laboratory partnership">
-        <div class="body">
-          <div class="meta">Partners</div>
-          <h3>Institutional partners</h3>
-          <p>Universities, laboratories, and firms collaborating to strengthen the practice across Peru.</p>
-          <a href="/ourpartners.html">Our partners &rarr;</a>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -66,28 +104,21 @@ description: IAEG Peru is part of a global network dedicated to advancing
 <section class="alt">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">Latest</p>
-      <h2>News &amp; upcoming events</h2>
+      <p class="eyebrow">{{ latestEyebrow }}</p>
+      <h2>{{ latestTitle }}</h2>
     </div>
     <div class="grid cols-2">
+      {% for card in latestCards %}
       <div class="card">
-        <img src="/Geoscience Expo 2026.jpg" alt="Geoscience Expo 2026">
+        {% if card.image %}<img src="{{ card.image }}" alt="{{ card.title }}">{% endif %}
         <div class="body">
-          <div class="meta">News</div>
-          <h3>Joining Efforts with CGECC to Organize the next Olympiad</h3>
-          <p>A look at the association's participation in this year's national geoscience exhibition.</p>
-          <a href="/news.html">Read the news &rarr;</a>
+          <div class="meta">{{ card.tag }}</div>
+          <h3>{{ card.title }}</h3>
+          <p>{{ card.text }}</p>
+          <a href="{{ card.linkUrl }}">{{ card.linkText }} &rarr;</a>
         </div>
       </div>
-      <div class="card">
-        <img src="/Mineralogy Workshop.jpg" alt="Mineralogy workshop">
-        <div class="body">
-          <div class="meta">Event</div>
-          <h3>Mineralogy Workshop</h3>
-          <p>Hands-on sessions for students and early-career professionals, open to all members.</p>
-          <a href="/events.html">See event details &rarr;</a>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
