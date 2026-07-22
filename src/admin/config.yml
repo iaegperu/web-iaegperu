@@ -46,12 +46,71 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string", required: false }
           - { label: "Content", name: "body", widget: "markdown", required: false }
-      - label: "About Us"           
+      - label: "About Us"
         name: "about"
         file: "src/about.html"
         fields:
-          - { label: "Title", name: "title", widget: "string", required: false }
-          - { label: "Content", name: "body", widget: "markdown", required: false }
+          - { label: "Title (browser tab)", name: "title", widget: "string", required: false }
+
+          - { label: "Hero — Eyebrow", name: "heroEyebrow", widget: "string" }
+          - { label: "Hero — Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero — Lead paragraph", name: "heroLead", widget: "text" }
+          - { label: "Hero — Background image", name: "heroImage", widget: "image" }
+
+          - { label: "Mission — Eyebrow", name: "missionEyebrow", widget: "string" }
+          - { label: "Mission — Title", name: "missionTitle", widget: "string" }
+          - { label: "Mission — Paragraph 1", name: "missionText1", widget: "text" }
+          - { label: "Mission — Paragraph 2 (optional)", name: "missionText2", widget: "text", required: false }
+          - { label: "Mission — Image", name: "missionImage", widget: "image", required: false }
+
+          - { label: "Vision — Eyebrow", name: "visionEyebrow", widget: "string" }
+          - { label: "Vision — Title", name: "visionTitle", widget: "string" }
+          - { label: "Vision — Text", name: "visionText", widget: "text" }
+          - label: "Vision — Strategic priorities"
+            name: "priorities"
+            widget: "list"
+            field: { label: "Priority", name: "item", widget: "string" }
+
+          - { label: "Values — Eyebrow", name: "valuesEyebrow", widget: "string" }
+          - { label: "Values — Title", name: "valuesTitle", widget: "string" }
+          - label: "Values — List"
+            name: "values"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+          - { label: "Executive Committee — Eyebrow", name: "execEyebrow", widget: "string" }
+          - { label: "Executive Committee — Title", name: "execTitle", widget: "string" }
+          - { label: "Executive Committee — Intro text", name: "execIntro", widget: "text", required: false }
+          - label: "Executive Committee — Members"
+            name: "committee"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.role}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Bio", name: "bio", widget: "text", required: false }
+              - { label: "Photo", name: "photo", widget: "image", required: false }
+              - { label: "Button label", name: "buttonLabel", widget: "string", default: "Message" }
+              - { label: "Button link (email or URL)", name: "buttonUrl", widget: "string", required: false }
+
+          - { label: "Recognition — Eyebrow", name: "recognitionEyebrow", widget: "string" }
+          - { label: "Recognition — Title", name: "recognitionTitle", widget: "string" }
+          - { label: "Recognition — Image", name: "recognitionImage", widget: "image", required: false }
+          - { label: "Recognition — Heading", name: "recognitionHeading", widget: "string" }
+          - { label: "Recognition — Text", name: "recognitionText", widget: "text" }
+          - { label: "Recognition — Link text", name: "recognitionLinkText", widget: "string", required: false }
+          - { label: "Recognition — Link URL", name: "recognitionLinkUrl", widget: "string", required: false }
+
+          - { label: "Why Join Us — Eyebrow", name: "whyJoinEyebrow", widget: "string" }
+          - { label: "Why Join Us — Title", name: "whyJoinTitle", widget: "string" }
+          - { label: "Why Join Us — Text", name: "whyJoinText", widget: "text" }
+          - label: "Why Join Us — Points"
+            name: "whyJoinPoints"
+            widget: "list"
+            field: { label: "Point", name: "item", widget: "string" }
       - label: "Projects"           
         name: "projects_page"
         file: "src/projects.html"   # <-- Ruta simplificada

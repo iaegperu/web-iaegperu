@@ -312,3 +312,99 @@ border-radius: 8px;
 .post-body {
 line-height: 1.7;
 }
+
+/* ===========================================================
+About page additions — Vision, Executive Committee, Why Join Us
+=========================================================== */
+
+/* ---------- Strategic priorities list ---------- */
+.priority-list {
+list-style: none;
+margin: 0;
+padding: 0;
+display: grid;
+gap: 12px;
+}
+.priority-list li {
+padding-left: 1.5em;
+position: relative;
+color: var(--texto-suave);
+font-size: .95rem;
+}
+.priority-list li::before {
+content: "—";
+position: absolute;
+left: 0;
+color: var(--dorado);
+font-weight: 600;
+}
+
+/* ---------- Executive Committee team grid ---------- */
+.team-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 36px;
+}
+@media (max-width: 860px) {
+.team-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+.team-grid { grid-template-columns: 1fr; }
+}
+.team-card {
+text-align: center;
+}
+.team-card img {
+width: 132px;
+height: 132px;
+object-fit: cover;
+border-radius: 50%;
+margin: 0 auto 18px;
+border: 3px solid var(--blanco);
+box-shadow: 0 4px 14px rgba(10,31,51,0.12);
+}
+.team-card h3 {
+font-size: 1.05rem;
+margin-bottom: .2em;
+color: var(--azul-oscuro);
+}
+.team-card .role {
+font-family: var(--mono);
+font-size: .7rem;
+text-transform: uppercase;
+letter-spacing: .07em;
+color: var(--dorado);
+margin-bottom: .8em;
+font-weight: 500;
+}
+.team-card p:not(.role) {
+font-size: .9rem;
+}
+.team-card .btn {
+margin-top: 8px;
+padding: 10px 20px;
+font-size: .78rem;
+}
+
+/* ---------- Why join us checklist ---------- */
+.why-join-list {
+list-style: none;
+margin: 0;
+padding: 0;
+display: grid;
+gap: 16px;
+}
+.why-join-list li {
+padding-left: 1.7em;
+position: relative;
+color: var(--texto-oscuro);
+font-size: .95rem;
+}
+.why-join-list li::before {
+content: "\2713";
+position: absolute;
+left: 0;
+top: 0;
+color: var(--dorado);
+font-weight: 700;
+}
