@@ -1,60 +1,18 @@
 ---
 title: Communications and Outreach
-summary: Plans and coordinates IAEG Peru's calendar of national events, from
-  technical symposiums to member gatherings.
+summary: Manage the group’s internal and external communication strategies,
+  enhancing the visibility of geological engineering through digital media,
+  professional networking, and public engagement.
 image: ""
 ---
-#### **Delivering high-impact geoscience events with institutional excellence**
+**Scope and Mission**
 
-The **Communications and Outreach Committee of IAEG Peru** is responsible for the planning, coordination, and delivery of strategic events that strengthen engineering geology, geotechnics, and geoscience collaboration at national and international levels.
+The Communications and Outreach Committee manages IAEG Peru’s institutional identity, official digital channels, and public relations. It produces high-quality, scientifically accurate engineering content and drives marketing campaigns for technical seminars, webinars, and field trips. By bridging the gap between academia, industry, and the public, the committee ensures all initiatives promote technical excellence and maintain strict professional and ethical standards.
 
-This committee plays a key operational role in ensuring that all events are executed with high technical standards, strong institutional alignment, and effective coordination across teams and partners.
+**How the Team Works**
 
-### Mission and Scope
+Operating under a structured and accountable framework, the committee ensures seamless execution through centralized coordination with the Executive Committee. Team members work with defined roles, clear timelines, and open communication channels. Operational success relies on deep collaboration with national institutions (CIP), international organizations (ABGE, IAEG International, IUGS-COGE), and academic partners like CEGCC to deliver globally connected, impactful events. 
 
-The Communications and Outreach Committee aims to:
+**Future Plans**
 
-* Design and deliver high-quality technical events aligned with IAEG priorities
-* Ensure structured coordination and clear roles across organising teams
-* Strengthen institutional visibility through well-executed events
-* Support international collaboration through joint initiatives and partnerships
-
-### Strategic Role
-
-This committee is responsible for flagship initiatives such as:
-
-* **2nd Peruvian Biennial in Geotechnics (2026)**
-* Webinar Series, workshops, forums, and technical sessions
-* Collaboration with global events such as *Slope Stability 2026*
-
-Through these activities, the Committee contributes to positioning IAEG Peru as an active and reliable partner in the international geoscience community.
-
-### How We Work
-
-This operates under a structured and accountable framework:
-
-* Defined roles and responsibilities for each function
-* Centralised coordination aligned with the Executive Committee
-* Clear timelines, deliverables, and communication channels
-* Collaboration with institutional and international partners
-
-This approach ensures efficiency, transparency, and consistency across all initiatives.
-
-### Collaboration and Partnerships
-
-The committee works closely with the following organisations:
-
-* National institutions (e.g., CIP)
-* International organisations (e.g., ABGE, IAEG international, IUGS-COGE)
-* Technical and academic partners such as CEGCC.
-
-These collaborations enable the delivery of impactful and globally connected events.
-
-### Looking Ahead
-
-IAEG Peru is committed to delivering events that:
-
-* Promote technical excellence
-* Foster inclusive participation
-* Strengthen regional collaboration
-* Enhance the global visibility of Peruvian geoscience
+Looking ahead, the committee is dedicated to delivering high-impact geoscience events with institutional excellence. Key upcoming milestones include executing flagship initiatives such as the 2nd Peruvian Biennial in Geotechnics (2026) and collaborating on global events like Slope Stability 2026. Through these strategic actions, the team will foster inclusive participation, strengthen regional collaboration, and elevate the global visibility of Peruvian geoscience.
