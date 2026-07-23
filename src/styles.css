@@ -206,6 +206,30 @@ footer.site a:hover { color: var(--dorado); opacity: 1; text-decoration: underli
 .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px; font-size: .78rem; color: var(--texto-suave); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
 @media (max-width: 700px) { .footer-grid { grid-template-columns: 1fr; } }
 
+/* ---------- Footer social icons ---------- */
+.footer-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--blanco);
+  opacity: .85;
+  transition: background .15s, opacity .15s, color .15s;
+}
+.footer-social-link:hover {
+  background: var(--dorado);
+  color: var(--azul-oscuro);
+  opacity: 1;
+}
+
 /* ---------- Inner page header ---------- */
 .page-head { background: var(--gris-claro); padding: 64px 0 48px; border-bottom: 1px solid var(--linea-sutil); }
 .page-head h1 { font-size: clamp(1.9rem, 3.6vw, 2.8rem); color: var(--azul-oscuro); }
