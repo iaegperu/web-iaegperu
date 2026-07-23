@@ -3,8 +3,8 @@ title: Registration to the 2nd Peruvian Geotechnical Biennial is open
 date: 2026-05-11
 image: /assets/images/inscripciones-abiertas.png
 summary: "A national platform for advancing engineering geology and geotechnics
-  in Peru. The motto this year is: “Integrated Geotechnical Solutions for Peru’s
-  Development”."
+  in Peru. This year's event theme is: “Integrated Geotechnical Solutions for
+  Peru’s Development”."
 ---
 The 2nd Peruvian Geotechnical Biennial invites students, professionals, and anyone interested in the field of geotechnical engineering to take part in this important academic and professional gathering.
 
