@@ -157,7 +157,7 @@ collections:
             field: { label: "Point", name: "item", widget: "string" }
       - label: "Projects"           
         name: "projects_page"
-        file: "src/projects.html"   # <-- Ruta simplificada
+        file: "src/projects.html"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - label: "Project List"
@@ -171,7 +171,7 @@ collections:
               - { label: "Description", name: "description", widget: "text" }
       - label: "Partners"           
         name: "partners_page"
-        file: "src/partners.html"   # <-- Ruta simplificada
+        file: "src/partners.html"
         fields:
           - { label: "Title", name: "title", widget: "string", required: false }
           - label: "Partner organizations"
@@ -215,3 +215,42 @@ collections:
         file: "src/committees.html"
         fields:
           - { label: "Title", name: "title", widget: "string", required: false }
+      - label: "Site Settings (Header & Footer)"
+        name: "site_settings"
+        file: "src/_data/site.json"
+        fields:
+          - { label: "Site name", name: "name", widget: "string" }
+          - { label: "Tagline (shown under the logo)", name: "tagline", widget: "string" }
+          - { label: "Site URL", name: "url", widget: "string" }
+          - { label: "Site description (used in footer & meta tags)", name: "description", widget: "text" }
+          - label: "Navigation menu"
+            name: "menu"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Label", name: "name", widget: "string" }
+              - { label: "Link", name: "url", widget: "string" }
+              - label: "Submenu items (optional — leave empty for a simple link)"
+                name: "children"
+                widget: "list"
+                required: false
+                summary: "{{fields.name}}"
+                fields:
+                  - { label: "Label", name: "name", widget: "string" }
+                  - { label: "Link", name: "url", widget: "string" }
+          - label: "Social media links (footer)"
+            name: "socialLinks"
+            widget: "list"
+            summary: "{{fields.platform}}"
+            fields:
+              - label: "Platform"
+                name: "platform"
+                widget: "select"
+                options: ["Facebook", "Instagram", "X", "LinkedIn", "YouTube"]
+              - label: "Profile URL"
+                name: "url"
+                widget: "string"
+                required: false
+                hint: "Leave empty to hide this icon in the footer."
+          - { label: "Copyright text (footer)", name: "copyrightText", widget: "string" }
+          - { label: "Footer domain label (e.g. iaegperu.org)", name: "footerDomainLabel", widget: "string" }
