@@ -197,11 +197,11 @@ padding: 30px 0; border-top: 1px solid var(--linea-sutil);
 .timeline-item .when strong { display: block; font-family: var(--serif); font-size: 1.3rem; color: var(--azul-oscuro); font-weight: 600; }
 
 /* ---------- Footer (Kept dark basalt style with subtle links) ---------- */
-footer.site { background: var(--azul-oscuro); color: var(--gris-claro); padding: 56px 0 28px; border-top: 4px solid var(--dorado); }
+footer.site { background: var(--azul-oscuro); color: var(--gris-claro); padding: 56px 0 28px; border-top: 4px solid var(--dorado-footer); }
 footer.site a { color: var(--blanco); opacity: .85; }
-footer.site a:hover { color: var(--dorado); opacity: 1; text-decoration: underline; }
+footer.site a:hover { color: var(--dorado-footer); opacity: 1; text-decoration: underline; }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 32px; margin-bottom: 40px; }
-.footer-grid h4 { font-family: var(--mono); font-size: .72rem; text-transform: uppercase; letter-spacing: .1em; color: var(--dorado); margin-bottom: 14px; }
+.footer-grid h4 { font-family: var(--mono); font-size: .72rem; text-transform: uppercase; letter-spacing: .1em; color: var(--dorado-footer); margin-bottom: 14px; }
 .footer-grid ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; font-size: .9rem; }
 .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px; font-size: .78rem; color: var(--texto-suave); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
 @media (max-width: 700px) { .footer-grid { grid-template-columns: 1fr; } }
@@ -225,7 +225,7 @@ footer.site a:hover { color: var(--dorado); opacity: 1; text-decoration: underli
   transition: background .15s, opacity .15s, color .15s;
 }
 .footer-social-link:hover {
-  background: var(--dorado);
+  background: var(--dorado-footer);
   color: var(--azul-oscuro);
   opacity: 1;
 }
