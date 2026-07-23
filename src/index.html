@@ -38,7 +38,7 @@ whatWeDoCards:
   - image: /Annual Field Trek_ Rocky Mountains.jpg
     livePreview: true
     tag: Projects
-    title: Applied geoscience programs
+    title: Field research programs
     text: Applied geoscience projects that connect students and professionals with
       real-world problems across Peru.
     linkText: See projects
@@ -46,39 +46,30 @@ whatWeDoCards:
   - image: /Community Outreach.jpg
     livePreview: true
     tag: Committees
-    title: Committees
-    text: Focused groups driving technical standards within the association.
+    title: Working committees
+    text: Focused groups driving education, outreach, and technical standards within
+      the association.
     linkText: Meet committees
     linkUrl: /committees.html
   - image: /New Laboratory Partnership.jpg
     livePreview: true
     tag: Partners
     title: Institutional partners
-    text: National and internationa organisations, groups and firms collaborating to
-      strengthen the practice of engineering geology and the environment across
-      Peru.
+    text: Universities, laboratories, and firms collaborating to strengthen the
+      practice across Peru.
     linkText: Our partners
     linkUrl: /partners.html
 latestEyebrow: Latest
 layout: layout.njk
 latestTitle: News & upcoming events
 latestCards:
-  - image: /Geoscience Expo 2026.jpg
+  - image: "/Geoscience Expo 2026.jpg"
     livePreview: true
-    tag: News
-    title: Joining Efforts with CGECC to Organize the next Olympiad
-    text: A look at the association's participation in this year's national
-      geoscience exhibition.
-    linkText: Read the news
-    linkUrl: /news.html
-  - image: /Mineralogy Workshop.jpg
-    livePreview: true
-    tag: Event
-    title: Mineralogy Workshop
-    text: Hands-on sessions for students and early-career professionals, open to all
-      members.
-    linkText: See event details
-    linkUrl: /events.html
+    tag: "News"
+    title: "Joining Efforts with CGECC to Organize the next Olympiad"
+    text: "A look at the association's participation in this year's national geoscience exhibition."
+    linkText: "Read the news"
+    linkUrl: "/news.html"
 ---
 <section class="hero">
   <div class="wrap">
@@ -153,6 +144,21 @@ latestCards:
         </div>
       </div>
       {% endfor %}
+
+      {% set nextEvent = collections.eventsPage[0].data.events[0] %}
+      {% if nextEvent %}
+      <div class="card">
+        <div class="page-thumb">
+          <iframe src="/events.html" title="{{ nextEvent.title }} preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+        </div>
+        <div class="body">
+          <div class="meta">Event &middot; {{ nextEvent.dateLabel }}</div>
+          <h3>{{ nextEvent.title }}</h3>
+          <p>{{ nextEvent.description }}</p>
+          <a href="/events.html">See event details &rarr;</a>
+        </div>
+      </div>
+      {% endif %}
     </div>
   </div>
 </section>

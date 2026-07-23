@@ -25,6 +25,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("partnersPage", (collectionApi) => {
     return collectionApi.getFilteredByGlob("src/ourpartners.html");
   });
+  // Explicit "eventsPage" collection — points at src/events.html so we can
+  // pull the next upcoming event on the Home page
+  // (e.g. "{{ collections.eventsPage[0].data.events[0] }}") instead of a
+  // hardcoded event card that goes stale.
+  eleventyConfig.addCollection("eventsPage", (collectionApi) => {
+    return collectionApi.getFilteredByGlob("src/events.html");
+  });
   // Formats a date like "January 15, 2026" for news posts
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     if (!dateObj) return "";
