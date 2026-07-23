@@ -18,12 +18,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("committees", (collectionApi) => {
     return collectionApi.getFilteredByGlob("src/committees/*.md");
   });
-  // Explicit "partnersPage" collection — points at src/ourpartners.html so we
+  // Explicit "partnersPage" collection — points at src/partners.html so we
   // can pull the live count of partner organizations on the Home page
   // (e.g. "{{ collections.partnersPage[0].data.partners.length }}") instead
   // of a hardcoded number.
   eleventyConfig.addCollection("partnersPage", (collectionApi) => {
-    return collectionApi.getFilteredByGlob("src/ourpartners.html");
+    return collectionApi.getFilteredByGlob("src/partners.html");
   });
   // Explicit "eventsPage" collection — points at src/events.html so we can
   // pull the next upcoming event on the Home page
