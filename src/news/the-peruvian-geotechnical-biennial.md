@@ -1,6 +1,6 @@
 ---
-title: The Peruvian Geotechnical Biennial
-date: 2019-06-19
+title: Registration to the 2nd Peruvian Geotechnical Biennial is open
+date: 2026-05-11
 image: /assets/images/inscripciones-abiertas.png
 summary: A national platform for advancing engineering geology and geotechnics in Peru
 ---
