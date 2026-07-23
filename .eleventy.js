@@ -1,3 +1,5 @@
+const markdownIt = require("markdown-it")({ html: false, breaks: true, linkify: true });
+
 module.exports = function (eleventyConfig) {
   // CSS
   eleventyConfig.addPassthroughCopy("src/styles.css");
@@ -40,6 +42,13 @@ module.exports = function (eleventyConfig) {
       month: "long",
       day: "numeric",
     });
+  });
+  // Converts Markdown text (from list-widget "markdown" fields, e.g. Project
+  // descriptions) into real HTML — bold, links, bullet lists, paragraphs, etc.
+  // Usage in templates: {{ someText | markdownify | safe }}
+  eleventyConfig.addFilter("markdownify", (content) => {
+    if (!content) return "";
+    return markdownIt.render(content);
   });
   return {
     dir: {

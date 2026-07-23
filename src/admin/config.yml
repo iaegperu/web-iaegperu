@@ -172,9 +172,25 @@ collections:
             summary: "{{fields.title}}"
             fields:
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Status", name: "status", widget: "string" }
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Status", name: "status", widget: "string", required: false }
+              - { label: "Cover image", name: "image", widget: "image", required: false }
+              - label: "Description"
+                name: "description"
+                widget: "markdown"
+                required: false
+                hint: "You can use bold, italics, links, and bullet lists here."
+                buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list"]
+                editor_components: []
+              - label: "Photo gallery (optional)"
+                name: "gallery"
+                widget: "list"
+                required: false
+                field: { label: "Photo", name: "photo", widget: "image" }
+              - label: "Website link (optional)"
+                name: "websiteUrl"
+                widget: "string"
+                required: false
+                hint: "Adds a \"Visit website\" button. Leave empty to hide it."
       - label: "Partners"           
         name: "partners_page"
         file: "src/partners.html"

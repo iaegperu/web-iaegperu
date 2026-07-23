@@ -68,7 +68,7 @@ projects:
 <section>
   <div class="wrap">
     <div class="grid cols-3">
-      
+
       <!-- Este bucle genera automáticamente todas las tarjetas usando la lista de arriba -->
       {% for p in projects %}
       <div class="card">
@@ -76,7 +76,22 @@ projects:
         <div class="body">
           {% if p.status %}<div class="meta">{{ p.status }}</div>{% endif %}
           <h3>{{ p.title }}</h3>
-          <p>{{ p.description }}</p>
+
+          {% if p.description %}
+          <div class="project-description">{{ p.description | markdownify | safe }}</div>
+          {% endif %}
+
+          {% if p.gallery and p.gallery.length %}
+          <div class="project-gallery">
+            {% for g in p.gallery %}
+            <img src="{{ g.photo }}" alt="{{ p.title }} photo">
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          {% if p.websiteUrl %}
+          <a class="btn ghost" href="{{ p.websiteUrl }}" target="_blank" rel="noopener noreferrer" style="margin-top:14px;">Visit website &rarr;</a>
+          {% endif %}
         </div>
       </div>
       {% endfor %}
