@@ -1,8 +1,8 @@
 ---
-title: "The Peruvian Olympiad in Geosciences"
-date: 2019-06-19
-image: "https://images.squarespace-cdn.com/content/v1/684b8db39007506c920bdb83/1751430031511-G5D917AXBB336JYGNWM5/unsplash-image-PBB5nBrlFiA.jpg"
-summary: "Empowering Young Minds Through Earth Science Education"
+title: The Peruvian Olympiad in Geosciences
+date: 2026-07-13
+image: https://images.squarespace-cdn.com/content/v1/684b8db39007506c920bdb83/1751430031511-G5D917AXBB336JYGNWM5/unsplash-image-PBB5nBrlFiA.jpg
+summary: Empowering Young Minds Through Earth Science Education
 ---
 
 ### Empowering Young Minds Through Earth Science Education
