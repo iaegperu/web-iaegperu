@@ -130,6 +130,18 @@ border-bottom: 1px solid var(--linea-sutil);
 .hero-media { margin-top: 48px; border-radius: 4px; overflow: hidden; position: relative; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); }
 .hero-media img { width: 100%; height: min(60vh, 460px); object-fit: cover; }
 
+/* ---------- Hero lead paragraph (rich text) ---------- */
+.hero-lead {
+  font-size: 1.1rem;
+  max-width: 56ch;
+  color: var(--texto-suave);
+}
+.hero-lead p { margin: 0 0 1em; color: var(--texto-suave); }
+.hero-lead ul, .hero-lead ol { margin: 0 0 1em; padding-left: 1.3em; }
+.hero-lead li { margin-bottom: .3em; }
+.hero-lead strong { color: var(--azul-oscuro); }
+.hero-lead a { color: var(--azul-medio); text-decoration: underline; }
+
 /* ---------- Sections ---------- */
 section { padding: 72px 0; }
 section.alt { background: var(--gris-claro); }
