@@ -51,19 +51,32 @@ partners:
   </div>
 </section>
 
+{% set featured = partners[0] %}
+{% if featured %}
 <section>
   <div class="wrap">
     <div class="grid cols-2">
-      <img src="/New Laboratory Partnership.jpg" alt="New laboratory partnership">
+      <div class="featured-partner-logo">
+        {% if featured.logo %}
+        <img src="{{ featured.logo }}" alt="{{ featured.name }} logo">
+        {% else %}
+        <div class="partner-logo-placeholder">Logo pending</div>
+        {% endif %}
+      </div>
       <div>
         <p class="eyebrow">Featured partnership</p>
-        <h2>New Laboratory Partnership</h2>
-        <p>Our newest agreement gives members direct access to advanced soil and rock testing equipment, closing the gap between fieldwork and formal analysis.</p>
-        <a class="btn ghost" href="/news.html">Read more in News &rarr;</a>
+        <h2>{{ featured.name }}</h2>
+        {% if featured.description %}
+        <p>{{ featured.description }}</p>
+        {% endif %}
+        {% if featured.buttonUrl %}
+        <a class="btn ghost" href="{{ featured.buttonUrl }}" target="_blank" rel="noopener noreferrer">Visit {{ featured.name }} &rarr;</a>
+        {% endif %}
       </div>
     </div>
   </div>
 </section>
+{% endif %}
 
 <section class="alt">
   <div class="wrap">
@@ -190,5 +203,26 @@ partners:
 
   .partner-mou-btn {
     font-size: 0.85rem;
+  }
+
+  /* ---------- Featured Partnership block ---------- */
+  .featured-partner-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gris-claro, #f4f6f9);
+    border-radius: 10px;
+    padding: 40px;
+    min-height: 220px;
+  }
+  .featured-partner-logo img {
+    max-width: 70%;
+    max-height: 160px;
+    object-fit: contain;
+  }
+  .featured-partner-logo .partner-logo-placeholder {
+    width: auto;
+    height: auto;
+    padding: 30px 40px;
   }
 </style>
