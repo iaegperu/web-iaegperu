@@ -18,21 +18,22 @@ heroLead: >
 
   Equity, Diversity, and Inclusivity (EDI): Fostering an inclusive environment where all members are treated with respect, dignity, and equality.
 
-  Public Voice: Acting as a national voice to appropriately manage the risks between human works and geohazards.
+  Public Voice: Acting as a worldwide voice to appropriately manage the risks between human works and geological hazards.
 heroImage: https://images.squarespace-cdn.com/content/v1/684b8db39007506c920bdb83/1751853663705-L1AV7MB80O1MWEFESJAB/unsplash-image-8Jbo0T-DxUI.jpg
 heroCtaLabel1: About the association
 heroCtaUrl1: /about.html
 heroCtaLabel2: Upcoming events
 heroCtaUrl2: /events.html
 statsCommitteesLabel: Active Committees
-statsPartnersSuffix: ""
+statsPartnersSuffix: Partners
 statsPartnersLabel: Partner Institutions
 statsFounded: "2021"
 statsFoundedLabel: Founded
 whatWeDoEyebrow: What we do
-whatWeDoTitle: A community built on knowledge, research, and mentorship. Join a
-  network of dedicated engineers and geoscientists. Our community provides access to webinars,
-  professional courses, workshops, and an influential community of industry mentors.
+whatWeDoTitle: A community built on fieldwork, research, and mentorship. Join a
+  network of dedicated geoscientists. Our community provides access to webinars,
+  fieldwork opportunities, professional workshops, and an influential community
+  of industry mentors.
 whatWeDoCards:
   - image: /Annual Field Trek_ Rocky Mountains.jpg
     livePreview: true
@@ -62,20 +63,19 @@ latestEyebrow: Latest
 layout: layout.njk
 latestTitle: News & upcoming events
 latestCards:
-  - image: /Geoscience Expo 2026.jpg
+  - image: "/Geoscience Expo 2026.jpg"
     livePreview: true
-    tag: News
-    title: Joining Efforts with CIGECC to Organize our next Geoscience Olympiad
-    text: A look at the association's participation in this year's national
-      geoscience exhibition.
-    linkText: Read the news
-    linkUrl: /news.html
+    tag: "News"
+    title: "Joining Efforts with CGECC to Organize the next Olympiad"
+    text: "A look at the association's participation in this year's national geoscience exhibition."
+    linkText: "Read the news"
+    linkUrl: "/news.html"
 ---
 <section class="hero">
   <div class="wrap">
     <p class="eyebrow">{{ heroEyebrow }}</p>
     <h1>{{ heroTitle }}</h1>
-    <p class="lead">{{ heroLead }}</p>
+    <div class="hero-lead">{{ heroLead | markdownify | safe }}</div>
     <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;">
       <a class="btn" href="{{ heroCtaUrl1 }}">{{ heroCtaLabel1 }}</a>
       <a class="btn ghost" href="{{ heroCtaUrl2 }}">{{ heroCtaLabel2 }}</a>

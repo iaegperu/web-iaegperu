@@ -55,7 +55,12 @@ collections:
 
           - { label: "Hero — Eyebrow", name: "heroEyebrow", widget: "string" }
           - { label: "Hero — Title", name: "heroTitle", widget: "string" }
-          - { label: "Hero — Lead paragraph", name: "heroLead", widget: "text" }
+          - label: "Hero — Lead paragraph"
+            name: "heroLead"
+            widget: "markdown"
+            hint: "You can use bold, italics, links, and bullet lists here."
+            buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list"]
+            editor_components: []
           - { label: "Hero — Background image", name: "heroImage", widget: "image" }
           - { label: "Hero — Button 1 label", name: "heroCtaLabel1", widget: "string" }
           - { label: "Hero — Button 1 link", name: "heroCtaUrl1", widget: "string" }
