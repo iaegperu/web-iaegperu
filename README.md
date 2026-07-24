@@ -78,6 +78,16 @@ To test the Decap CMS admin panel locally against a local Git backend (instead o
 
 Every push to `main` is automatically built and deployed by Vercel. No manual deploy steps are needed.
 
+## Access & Contributions
+
+This repository is publicly visible for transparency, but it is **not open to external contributions**. It is maintained exclusively by IAEG Peru's Executive Committee, Webmaster, and designated Social Media team members with granted GitHub write access.
+
+- **Pull requests from outside contributors will not be reviewed or merged.**
+- Write access is controlled per-person via `Settings → Collaborators and teams` and is only granted to active IAEG Peru staff/volunteers.
+- If you've found a bug or have a suggestion, please email **iaegperu@gmail.com** instead of opening a PR or issue.
+- Do not attempt unauthorized modifications — all commits are tied to an authenticated GitHub account and logged in the repository history.
+
 ## License
 
-GPL-3.0 — see `LICENSE`.
+GPL-3.0 — see `LICENSE`. Note: the license permits viewing, forking, and reuse of the code under its terms, but does **not** grant write access to this repository or authorize impersonating IAEG Peru's official website.
+
