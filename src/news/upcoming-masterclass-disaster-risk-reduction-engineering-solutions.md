@@ -17,7 +17,7 @@ The Masterclass will explore how lessons from Japan’s **Sabo technology** can 
 
 📅 **September 4, 2026**
 🕖 **7:00 PM (Peru Time)**
-💻 **Google Meet** – link to register here.
+💻 **Google Meet** – link to register [here](https://forms.gle/PfqwBMNRWNUyaRAq8).
 
 **Moderator:** MSc. Ruth Norabuena, Professor at UNI-FIGMM
 
