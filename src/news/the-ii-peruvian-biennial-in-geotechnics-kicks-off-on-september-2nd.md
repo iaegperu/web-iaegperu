@@ -1,6 +1,7 @@
 ---
 title: The  II Peruvian Biennial in Geotechnics kicks off on September 2nd
 date: 2026-08-25
+image: /assets/images/inscripciones-abiertas.png
 summary: >
   We are just days away! The II Peruvian Biennial in Geotechnics (II Bienal
   Peruana en Geotecnia) kicks off on September 2nd!
