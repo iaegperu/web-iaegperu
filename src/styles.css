@@ -131,11 +131,13 @@ border-bottom: 1px solid var(--linea-sutil);
 .hero-media img { width: 100%; height: min(60vh, 460px); object-fit: cover; }
 
 /* ---------- Hero lead paragraph (rich text) ---------- */
+.hero p.lead,
 .hero-lead {
   font-size: 1.1rem;
-  max-width: 56ch;
+  max-width: 100%; /* Permite que el texto use todo el ancho de la pantalla */
   color: var(--texto-suave);
 }
+
 .hero-lead p { margin: 0 0 1em; color: var(--texto-suave); }
 .hero-lead ul, .hero-lead ol { margin: 0 0 1em; padding-left: 1.3em; }
 .hero-lead li { margin-bottom: .3em; }
