@@ -95,6 +95,7 @@ committee:
 recognitionEyebrow: Recognition
 recognitionTitle: Supporting the next generation
 recognitionImage: /Graduate Fellowship Awards.jpg
+recognitionLivePreview: true
 recognitionHeading: Volunteers of the Year
 recognitionText: >
   Each year, IAEG Peru recognizes outstanding volunteers who support our
@@ -206,7 +207,13 @@ whyJoinPoints:
       <h2>{{ recognitionTitle }}</h2>
     </div>
     <div class="grid cols-2">
-      {% if recognitionImage %}
+      {% if recognitionLivePreview %}
+      <a href="{{ recognitionLinkUrl }}" aria-label="{{ recognitionLinkText }}">
+        <div class="page-thumb">
+          <iframe src="{{ recognitionLinkUrl }}" title="{{ recognitionHeading }} preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+        </div>
+      </a>
+      {% elif recognitionImage %}
       <a href="{{ recognitionLinkUrl }}" aria-label="{{ recognitionLinkText }}">
         <img src="{{ recognitionImage }}" alt="{{ recognitionHeading }}">
       </a>

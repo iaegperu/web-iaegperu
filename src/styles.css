@@ -152,6 +152,10 @@ section { padding: 72px 0; }
 section.alt { background: var(--gris-claro); }
 .section-head { max-width: 60ch; margin-bottom: 40px; }
 .section-head h2 { font-size: clamp(1.6rem, 2.6vw, 2.2rem); color: var(--azul-oscuro); }
+/* Used only where the heading itself is a longer descriptive paragraph
+   (e.g. Home "What We Do") — avoids the awkward empty space that the
+   default 60ch cap leaves next to long text. */
+.section-head.wide { max-width: none; }
 
 /* ---------- Volunteers of the Year — "Honor Roll" ---------- */
 .honor-roll { margin: 56px 0 0; padding-top: 40px; border-top: 1px solid var(--linea-sutil); }

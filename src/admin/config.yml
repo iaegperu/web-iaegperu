@@ -167,6 +167,7 @@ collections:
           - { label: "Recognition — Eyebrow", name: "recognitionEyebrow", widget: "string" }
           - { label: "Recognition — Title", name: "recognitionTitle", widget: "string" }
           - { label: "Recognition — Image", name: "recognitionImage", widget: "image", required: false }
+          - { label: "Use live preview of destination page instead of image? (recommended — always accurate)", name: "recognitionLivePreview", widget: "boolean", default: true }
           - { label: "Recognition — Heading", name: "recognitionHeading", widget: "string" }
           - { label: "Recognition — Text", name: "recognitionText", widget: "text" }
           - { label: "Recognition — Link text", name: "recognitionLinkText", widget: "string", required: false }
