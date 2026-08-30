@@ -17,7 +17,7 @@ At IAEG Peru, our impact is driven by the dedication of our community. We celebr
 
 #### 🏆 Volunteer of the Year 2026
 
-![Volunteer of the Year 2026](/assets/images/claudia_nobckblanc.png)
+![Volunteer of the Year 2026]()
 
 **Name of the VOY 2026**\
 *\[Early-Career Geoscientist / Student / Senior Professional]*
