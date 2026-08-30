@@ -1,14 +1,15 @@
 ---
 title: Communications and Outreach
-summary: Manage the group’s internal and external communication strategies, enhancing the visibility of geological engineering through digital media, professional networking, and public engagement.
+summary: Manage the group’s internal and external communication strategies,
+  enhancing the visibility of geological engineering through digital media,
+  professional networking, and public engagement.
 image: /assets/images/img-20260211-wa0099.jpg
 ---
-
 ### Scope and Mission
 
 The Communications and Outreach Committee manages IAEG Perú’s institutional identity, official digital channels, and public relations. It produces high-quality, scientifically accurate engineering content and drives marketing campaigns for technical seminars, webinars, and field trips. By bridging the gap between academia, industry, and the public, the committee ensures all initiatives promote technical excellence and maintain strict professional and ethical standards.
 
----
+- - -
 
 ### Volunteer Recognition
 
@@ -16,31 +17,30 @@ At IAEG Peru, our impact is driven by the dedication of our community. We celebr
 
 #### 🏆 Volunteer of the Year 2026
 
-![Volunteer of the Year 2026](/assets/images/volunteer-2026.jpg)
+![Volunteer of the Year 2026](/assets/images/claudia_nobckblanc.png)
 
-**[Nombre del Voluntario]**  
-*[Early-Career Geoscientist / Student / Senior Professional]*
+**Name of the VOY 2026**\
+*\[Early-Career Geoscientist / Student / Senior Professional]*
 
-[Breve descripción de su contribución sobresaliente durante el año, ej: Liderazgo en la difusión de eventos y coordinación de canales digitales].
 
----
+
+- - -
 
 #### 🏆 Volunteer of the Year 2025
 
-![Volunteer 2025 - Claudia Sanchez](/assets/images/volunteer-2025.jpg)
+![VOY 2025 - Claudia Sanchez](/assets/images/claudia_nobckblanc.png "Eng. Claudia Sanchez")
 
-**Claudia Sanchez**  
-*[Early-Career Geoscientist]*
+**Claudia Sanchez**\
+*\[Early-Career Geoscientist]*
+Graduate in Geological Engineering with a strong focus on paleontology and applied geoscience research. Actively engaged in collaborative scientific initiatives and outreach activities, and the social impact of geosciences.
 
-Reconocida por su destacada dedicación en el diseño de contenidos, gestión de redes sociales y soporte en las campañas institucionales de IAEG Perú durante el 2025.
-
----
+- - -
 
 ### How the Team Works
 
 Operating under a structured and accountable framework, the committee ensures seamless execution through centralized coordination with the Executive Committee. Team members work with defined roles, clear timelines, and open communication channels. Operational success relies on deep collaboration with national institutions (CIP), international organizations (ABGE, IAEG International, IUGS-COGE), and academic partners like CEGCC to deliver globally connected, impactful events.
 
----
+- - -
 
 ### Future Plans & Get Involved
 
