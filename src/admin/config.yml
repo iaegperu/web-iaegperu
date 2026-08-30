@@ -42,6 +42,19 @@ collections:
       - { label: "Short summary (shown on Committees page)", name: "summary", widget: "text", required: false }
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Volunteers of the Year"
+        name: "volunteers"
+        widget: "list"
+        required: false
+        hint: "Agrega una entrada por cada voluntario/a. No importa el orden en que las agregues — la página los agrupa y ordena por año automáticamente (2021 en adelante)."
+        summary: "{{fields.year}} — {{fields.name}}"
+        fields:
+          - { label: "Year", name: "year", widget: "string" }
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Role / Degree", name: "role", widget: "string" }
+          - { label: "Photo", name: "photo", widget: "image", required: false }
+          - { label: "LinkedIn URL", name: "linkedin", widget: "string", required: false }
+          - { label: "Description", name: "description", widget: "text", required: false }
   - name: "pages"
     label: "Site pages"             
     label_singular: "Page"
