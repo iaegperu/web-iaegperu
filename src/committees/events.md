@@ -1,13 +1,21 @@
 ---
 title: Communications and Outreach
-summary: Manage the group’s internal and external communication strategies, enhancing the visibility of geological engineering through digital media, professional networking, and public engagement.
+summary: Manage the group’s internal and external communication strategies,
+  enhancing the visibility of geological engineering through digital media,
+  professional networking, and public engagement.
 image: /assets/images/img-20260211-wa0099.jpg
 volunteers:
   - year: "2025"
-    name: "Claudia Sanchez"
-    role: "Graduate in Geological Engineering"
-    photo: /assets/images/volunteer-2025.jpg
+    name: Claudia Sanchez
+    role: Graduate in Geological Engineering
+    photo: /assets/images/claudia_nobckblanc.png
     linkedin: https://linkedin.com/in/claudia-sanchez
+  - year: "2024"
+    name: Rubén Romero Mayma
+    role: Graduate in Geological Engineering
+  - year: "2022"
+    name: Judith Sullon
+    role: PhD Student in Geological Engineering
 ---
 
 ### Scope and Mission
