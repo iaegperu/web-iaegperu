@@ -18,6 +18,9 @@ IAEG PERU — Shared stylesheet
 /* New header gray variable for easier maintenance */
 --header-gray: #EDEFEA;
 
+/* Real gold accent, used for the Volunteers of the Year "Honor Roll" */
+--dorado-medalla: #b8912e;
+
 --serif: 'Fraunces', Georgia, serif;
 --sans: 'Inter', -apple-system, Segoe UI, sans-serif;
 --mono: 'IBM Plex Mono', monospace;
@@ -149,6 +152,39 @@ section { padding: 72px 0; }
 section.alt { background: var(--gris-claro); }
 .section-head { max-width: 60ch; margin-bottom: 40px; }
 .section-head h2 { font-size: clamp(1.6rem, 2.6vw, 2.2rem); color: var(--azul-oscuro); }
+
+/* ---------- Volunteers of the Year — "Honor Roll" ---------- */
+.honor-roll { margin: 56px 0 0; padding-top: 40px; border-top: 1px solid var(--linea-sutil); }
+.honor-roll-intro { max-width: 60ch; margin-top: -0.3em; }
+.honor-year { margin-top: 36px; }
+.honor-year-label {
+  font-family: var(--mono); font-size: .78rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: .08em;
+  color: var(--dorado-medalla); margin-bottom: 18px;
+}
+.honor-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 22px; }
+.honoree-card {
+  background: var(--blanco);
+  border: 1px solid var(--linea-sutil);
+  border-top: 3px solid var(--dorado-medalla);
+  border-radius: 6px;
+  padding: 26px 20px;
+  text-align: center;
+  transition: transform .2s, box-shadow .2s;
+}
+.honoree-card:hover { transform: translateY(-4px); box-shadow: 0 12px 20px -8px rgba(10,31,51,0.12); }
+.honoree-photo, .honoree-photo-placeholder {
+  width: 84px; height: 84px; border-radius: 50%;
+  margin: 0 auto 14px; display: flex; align-items: center; justify-content: center;
+  border: 3px solid var(--dorado-medalla);
+}
+.honoree-photo { object-fit: cover; display: block; }
+.honoree-photo-placeholder { background: var(--gris-claro); font-size: 1.6rem; }
+.honoree-name { display: block; font-family: var(--serif); font-size: 1.05rem; color: var(--azul-oscuro); margin: 4px 0; }
+.honoree-role { font-family: var(--mono); font-size: .7rem; text-transform: uppercase; letter-spacing: .05em; color: var(--texto-suave); margin-bottom: 10px; }
+.honoree-desc { font-size: .85rem; line-height: 1.5; color: var(--texto-suave); }
+.honoree-linkedin { display: inline-block; margin-top: 6px; font-family: var(--sans); font-size: .8rem; font-weight: 600; color: var(--azul-medio); }
+.honoree-linkedin:hover { color: var(--dorado-medalla); }
 
 /* ---------- Card Grid ---------- */
 .grid { display: grid; gap: 28px; }

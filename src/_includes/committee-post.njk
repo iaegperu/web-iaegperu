@@ -11,25 +11,32 @@ layout: layout.njk
     {{ content | safe }}
   </div>
   {% if volunteers %}
-  {% set sortedVolunteers = volunteers | sort(true, false, "year") %}
-  <section class="volunteers-section" style="margin: 40px 0;">
-    <h3>🏆 Volunteers of the Year</h3>
+  <section class="honor-roll">
+    <p class="eyebrow">Honor Roll</p>
+    <h2>Volunteers of the Year</h2>
+    <p class="honor-roll-intro">At IAEG Peru, our impact is driven by the dedication of our community. We celebrate the exceptional contributions of active members across all career stages.</p>
+    {% set sortedVolunteers = volunteers | sort(true, false, "year") %}
     {% set lastYear = "" %}
     {% for v in sortedVolunteers %}
       {% if v.year != lastYear %}
-        {% if not loop.first %}</div>{% endif %}
-        <h4 style="margin-top: 28px; color: #7a1e2c;">{{ v.year }}</h4>
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; margin-top: 12px;">
-        {% set lastYear = v.year %}
+        {% if not loop.first %}</div></div>{% endif %}
+        <div class="honor-year">
+          <p class="honor-year-label">🏅 {{ v.year }} Honorees</p>
+          <div class="honor-grid">
+          {% set lastYear = v.year %}
       {% endif %}
-        <div style="background: #f8f9fa; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; text-align: center;">
-          {% if v.photo %}<img src="{{ v.photo }}" alt="{{ v.name }}" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; margin: 0 auto 12px; display: block;">{% endif %}
-          <strong style="display: block; font-size: 1rem; color: #0a1f33; margin: 4px 0;">{{ v.name }}</strong>
-          <p style="font-size: 0.8rem; color: #64748b; margin-bottom: 8px;">{{ v.role }}</p>
-          {% if v.description %}<p style="font-size: 0.8rem; line-height: 1.4;">{{ v.description }}</p>{% endif %}
-          {% if v.linkedin %}<a href="{{ v.linkedin }}" target="_blank" rel="noopener" style="font-size: 0.8rem; color: #0077b5; font-weight: 600; text-decoration: none;">🔗 LinkedIn Profile</a>{% endif %}
-        </div>
-      {% if loop.last %}</div>{% endif %}
+          <div class="honoree-card">
+            {% if v.photo %}
+            <img class="honoree-photo" src="{{ v.photo }}" alt="{{ v.name }}">
+            {% else %}
+            <div class="honoree-photo honoree-photo-placeholder">🏅</div>
+            {% endif %}
+            <strong class="honoree-name">{{ v.name }}</strong>
+            {% if v.role %}<p class="honoree-role">{{ v.role }}</p>{% endif %}
+            {% if v.description %}<p class="honoree-desc">{{ v.description }}</p>{% endif %}
+            {% if v.linkedin %}<a class="honoree-linkedin" href="{{ v.linkedin }}" target="_blank" rel="noopener">🔗 LinkedIn</a>{% endif %}
+          </div>
+      {% if loop.last %}</div></div>{% endif %}
     {% endfor %}
   </section>
   {% endif %}
