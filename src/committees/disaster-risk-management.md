@@ -2,7 +2,7 @@
 title: Disaster Risk Management
 summary: Focuses on geological risk awareness and disaster risk reduction,
   working with communities near infrastructure and mining sites.
-image: ""
+image: /assets/images/webinar-drm2.jpg
 ---
 ## Disaster Risk Management Committee
 
