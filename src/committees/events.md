@@ -28,7 +28,7 @@ At IAEG Peru, our impact is driven by the dedication of our community. We celebr
   <div style="background: #f4f6f9; border: 1px solid rgba(10, 31, 51, 0.08); border-radius: 8px; padding: 24px; text-align: center;">
     <img src="/assets/images/volunteer-2025.jpg" alt="Volunteer 2025" style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; margin: 0 auto 16px; border: 3px solid #ffffff; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
     <span style="font-family: monospace; font-size: 0.75rem; color: #7a1e2c; font-weight: bold; text-transform: uppercase;">Volunteer of the Year 2025</span>
-    <h4 style="margin: 8px 0 4px; font-size: 1.1rem; color: #0a1f33;">[Nombre del Voluntario]</h4>
+    <h4 style="margin: 8px 0 4px; font-size: 1.1rem; color: #0a1f33;">[Claudia Sanchez]</h4>
     <p style="font-size: 0.85rem; color: #64748b; margin: 0;">[Breve descripción de su contribución sobresaliente durante el año].</p>
   </div>
 
