@@ -14,20 +14,9 @@ areas:
   - "Environmental Management and Territorial Resilience "
 workLines:
   - description: >+
-      🎯 Purpose and Vision
-
-
-      Contribute technical solutions to disaster risk management through applied geoscience.
-
-      Promote ethical principles in risk governance, planning, and territorial management.
-
-      Engage with decision-makers to ensure science-based and socially inclusive DRR policies.
-
-      Foster interdisciplinary collaboration to address complex hazards in Peru and Latin America.
-
-
-
-      Development of scientific and technical studies, multidisciplinary research, hazard and risk assessments, and methodologies and tools that support evidence-based disaster risk management.
+      Development of scientific and technical studies, multidisciplinary
+      research, hazard and risk assessments, and methodologies and tools that
+      support evidence-based disaster risk management.
 
 
 
@@ -75,8 +64,8 @@ collaboration:
     
     The DRM Committee welcomes collaborations with universities, municipalities, research centers, and professionals interested in advancing disaster resilience through a geoscientific lens. If you’d like to contribute or learn more, please contact us at iaeg.peru@gmail.com.
   title: Get Involved
-  buttonLabel: Join the IAEG Peru DRM Team
-  buttonUrl: https://iaegperu.org/committees/disaster-risk-management.html
+  buttonLabel: The IAEG Peru DRM Blog
+  buttonUrl: https://peligrosgeologicosenelperu.blogspot.com/
 ---
 The Disaster Risk Management Committee is a multidisciplinary technical initiative of IAEG Peru. It promotes the generation, exchange and application of scientific and technical knowledge to understand, prevent and reduce disaster risk.
 
