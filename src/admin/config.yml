@@ -42,7 +42,134 @@ collections:
       - { label: "Short summary (shown on Committees page)", name: "summary", widget: "text", required: false }
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
-      - label: "Volunteers of the Year"
+
+      - label: "Areas of work"
+        name: "areas"
+        widget: "list"
+        required: false
+        hint: "Add the broad areas of work of the committee. Example: Disaster Risk Management, Geosciences and Natural Processes."
+        field:
+          label: "Area"
+          name: "item"
+          widget: "string"
+
+      - label: "Lines of work"
+        name: "workLines"
+        widget: "list"
+        required: false
+        summary: "{{fields.title}}"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text", required: false }
+
+      - label: "Activities"
+        name: "activities"
+        widget: "list"
+        required: false
+        summary: "{{fields.title}}"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Status", name: "status", widget: "select", options: ["Upcoming", "Ongoing", "Completed"], required: false }
+          - { label: "Date or period", name: "date", widget: "string", required: false }
+          - { label: "Description", name: "description", widget: "text", required: false }
+          - { label: "Link label", name: "buttonLabel", widget: "string", required: false }
+          - { label: "Link URL", name: "buttonUrl", widget: "string", required: false }
+
+      - label: "Publications and knowledge"
+        name: "publications"
+        widget: "list"
+        required: false
+        summary: "{{fields.title}}"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - label: "Type"
+            name: "type"
+            widget: "select"
+            options:
+              - "White Paper"
+              - "Scientific article"
+              - "Technical article"
+              - "Technical document"
+              - "Working paper"
+              - "Statement"
+              - "Technical note"
+              - "Training material"
+              - "Other"
+          - { label: "Year", name: "year", widget: "string", required: false }
+          - { label: "Short description", name: "description", widget: "text", required: false }
+          - { label: "PDF or document", name: "file", widget: "file", required: false, media_folder: "src/assets/documents", public_folder: "/assets/documents" }
+          - { label: "External URL (optional)", name: "url", widget: "string", required: false }
+          - { label: "Button label", name: "buttonLabel", widget: "string", default: "View document", required: false }
+
+      - label: "Featured links and buttons"
+        name: "featuredLinks"
+        widget: "list"
+        required: false
+        hint: "Use this section for clear calls to action, such as View publications, Upcoming events, Geological hazards blog, or Participate."
+        summary: "{{fields.label}}"
+        fields:
+          - { label: "Button text", name: "label", widget: "string" }
+          - { label: "Link URL", name: "url", widget: "string" }
+          - label: "Style"
+            name: "style"
+            widget: "select"
+            options: ["Primary", "Secondary", "Outline"]
+            default: "Primary"
+          - { label: "Open in new tab", name: "newTab", widget: "boolean", default: false }
+
+      - label: "Events"
+        name: "committeeEvents"
+        widget: "list"
+        required: false
+        summary: "{{fields.title}}"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - label: "Category"
+            name: "category"
+            widget: "select"
+            options: ["Upcoming event", "Past event", "Participation in event"]
+          - { label: "Date or period", name: "date", widget: "string", required: false }
+          - { label: "Location", name: "location", widget: "string", required: false }
+          - { label: "Description", name: "description", widget: "text", required: false }
+          - { label: "Image", name: "image", widget: "image", required: false }
+          - { label: "Event link", name: "url", widget: "string", required: false }
+
+      - label: "Alliances and cooperation"
+        name: "alliances"
+        widget: "list"
+        required: false
+        hint: "Add only institutions with an actual collaboration, agreement, joint activity, or cooperation in progress."
+        summary: "{{fields.name}}"
+        fields:
+          - { label: "Organization name", name: "name", widget: "string" }
+          - { label: "Logo", name: "logo", widget: "image", required: false }
+          - { label: "Type of cooperation", name: "description", widget: "text", required: false }
+          - { label: "Website URL", name: "url", widget: "string", required: false }
+          - { label: "MoU or agreement URL (optional)", name: "mouUrl", widget: "string", required: false }
+
+      - label: "Committee members"
+        name: "members"
+        widget: "list"
+        required: false
+        summary: "{{fields.role}} — {{fields.name}}"
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Role", name: "role", widget: "string" }
+          - { label: "Photo", name: "photo", widget: "image", required: false }
+          - { label: "Professional profile / bio", name: "bio", widget: "text", required: false }
+          - { label: "LinkedIn or profile URL", name: "url", widget: "string", required: false }
+
+      - label: "Participation and collaboration"
+        name: "collaboration"
+        widget: "object"
+        required: false
+        fields:
+          - { label: "Section title", name: "title", widget: "string", default: "Participate / Collaborate with the Committee" }
+          - { label: "Text", name: "text", widget: "text", required: false }
+          - { label: "Button text", name: "buttonLabel", widget: "string", default: "Contact the Committee" }
+          - { label: "Button link", name: "buttonUrl", widget: "string", default: "mailto:iaeg.peru@gmail.com" }
+
+      - label: "Volunteers of the Year"      
         name: "volunteers"
         widget: "list"
         required: false
