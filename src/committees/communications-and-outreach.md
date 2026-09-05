@@ -76,6 +76,7 @@ volunteers:
   - year: "2023"
     name: Karla Tene
     role: PhD Student in Environmental Science
+    photo: /assets/images/foto-karla-tene.jpeg
 ---
 ### **About the Committee**
 
