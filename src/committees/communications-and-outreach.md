@@ -21,6 +21,13 @@ featuredLinks:
     newTab: false
     url: https://iaegperu.org/events.html
     label: Organised Events
+members:
+  - name: Alessandra Villacorta
+    role: Webmaster
+  - name: Claudia Sanchez
+    role: Memnber
+  - name: Rosa Yovera
+    role: Social Media Coordinator for the 2nd Peruvian Biennial
 collaboration:
   text: >-
     The Committee operates through coordinated planning, defined
