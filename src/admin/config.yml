@@ -43,24 +43,15 @@ collections:
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
 
-      - label: "Areas of work"
-        name: "areas"
-        widget: "list"
-        required: false
-        hint: "Add the broad areas of work of the committee. Example: Disaster Risk Management, Geosciences and Natural Processes."
-        field:
-          label: "Area"
-          name: "item"
-          widget: "string"
-
       - label: "Lines of work"
         name: "workLines"
         widget: "list"
         required: false
+        hint: "Add the broad areas / lines of work of the committee. Title only is fine for a simple tag; add a description for more detail. Example: Disaster Risk Management, Geosciences and Natural Processes."
         summary: "{{fields.title}}"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "text", required: false }
+          - { label: "Description (optional)", name: "description", widget: "text", required: false }
 
       - label: "Activities"
         name: "activities"
@@ -75,37 +66,11 @@ collections:
           - { label: "Link label", name: "buttonLabel", widget: "string", required: false }
           - { label: "Link URL", name: "buttonUrl", widget: "string", required: false }
 
-      - label: "Publications and knowledge"
-        name: "publications"
-        widget: "list"
-        required: false
-        summary: "{{fields.title}}"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - label: "Type"
-            name: "type"
-            widget: "select"
-            options:
-              - "White Paper"
-              - "Scientific article"
-              - "Technical article"
-              - "Technical document"
-              - "Working paper"
-              - "Statement"
-              - "Technical note"
-              - "Training material"
-              - "Other"
-          - { label: "Year", name: "year", widget: "string", required: false }
-          - { label: "Short description", name: "description", widget: "text", required: false }
-          - { label: "PDF or document", name: "file", widget: "file", required: false, media_folder: "src/assets/documents", public_folder: "/assets/documents" }
-          - { label: "External URL (optional)", name: "url", widget: "string", required: false }
-          - { label: "Button label", name: "buttonLabel", widget: "string", default: "View document", required: false }
-
       - label: "Featured links and buttons"
         name: "featuredLinks"
         widget: "list"
         required: false
-        hint: "Use this section for clear calls to action, such as View publications, Upcoming events, Geological hazards blog, or Participate."
+        hint: "Use this section for calls to action that point to other pages of the site, such as View Partners, Upcoming Events, or View Publications — do not duplicate that content here, just link to it."
         summary: "{{fields.label}}"
         fields:
           - { label: "Button text", name: "label", widget: "string" }
@@ -116,36 +81,6 @@ collections:
             options: ["Primary", "Secondary", "Outline"]
             default: "Primary"
           - { label: "Open in new tab", name: "newTab", widget: "boolean", default: false }
-
-      - label: "Events"
-        name: "committeeEvents"
-        widget: "list"
-        required: false
-        summary: "{{fields.title}}"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - label: "Category"
-            name: "category"
-            widget: "select"
-            options: ["Upcoming event", "Past event", "Participation in event"]
-          - { label: "Date or period", name: "date", widget: "string", required: false }
-          - { label: "Location", name: "location", widget: "string", required: false }
-          - { label: "Description", name: "description", widget: "text", required: false }
-          - { label: "Image", name: "image", widget: "image", required: false }
-          - { label: "Event link", name: "url", widget: "string", required: false }
-
-      - label: "Alliances and cooperation"
-        name: "alliances"
-        widget: "list"
-        required: false
-        hint: "Add only institutions with an actual collaboration, agreement, joint activity, or cooperation in progress."
-        summary: "{{fields.name}}"
-        fields:
-          - { label: "Organization name", name: "name", widget: "string" }
-          - { label: "Logo", name: "logo", widget: "image", required: false }
-          - { label: "Type of cooperation", name: "description", widget: "text", required: false }
-          - { label: "Website URL", name: "url", widget: "string", required: false }
-          - { label: "MoU or agreement URL (optional)", name: "mouUrl", widget: "string", required: false }
 
       - label: "Committee members"
         name: "members"

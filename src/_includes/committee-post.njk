@@ -12,31 +12,11 @@ layout: layout.njk
   </div>
 </article>
 
-{% if areas and areas.length %}
+{% if workLines and workLines.length %}
 <section>
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow">Focus</p>
-      <h2>Areas of Work</h2>
-    </div>
-    <div class="grid cols-3">
-      {% for area in areas %}
-      <div class="card">
-        <div class="body">
-          <p>{{ area }}</p>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-{% endif %}
-
-{% if workLines and workLines.length %}
-<section class="alt">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Approach</p>
       <h2>Lines of Work</h2>
     </div>
     <div class="grid cols-3">
@@ -54,7 +34,7 @@ layout: layout.njk
 {% endif %}
 
 {% if activities and activities.length %}
-<section>
+<section class="alt">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow">In progress</p>
@@ -76,57 +56,8 @@ layout: layout.njk
 </section>
 {% endif %}
 
-{% if committeeEvents and committeeEvents.length %}
-<section class="alt">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Calendar</p>
-      <h2>Events</h2>
-    </div>
-    <div class="grid cols-3">
-      {% for ev in committeeEvents %}
-      <div class="card">
-        {% if ev.image %}<img src="{{ ev.image }}" alt="{{ ev.title }}">{% endif %}
-        <div class="body">
-          {% if ev.category %}<div class="meta">{{ ev.category }}</div>{% endif %}
-          <h3>{{ ev.title }}</h3>
-          {% if ev.date %}<p>📅 {{ ev.date }}{% if ev.location %} &middot; 📍 {{ ev.location }}{% endif %}</p>{% endif %}
-          {% if ev.description %}<p>{{ ev.description }}</p>{% endif %}
-          {% if ev.url %}<a href="{{ ev.url }}" target="_blank" rel="noopener">View Event &rarr;</a>{% endif %}
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-{% endif %}
-
-{% if alliances and alliances.length %}
-<section>
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Network</p>
-      <h2>Alliances and Cooperation</h2>
-    </div>
-    <div class="grid cols-3">
-      {% for al in alliances %}
-      <div class="card">
-        {% if al.logo %}<img src="{{ al.logo }}" alt="{{ al.name }}">{% endif %}
-        <div class="body">
-          <h3>{{ al.name }}</h3>
-          {% if al.description %}<p>{{ al.description }}</p>{% endif %}
-          {% if al.url %}<a href="{{ al.url }}" target="_blank" rel="noopener">Website &rarr;</a>{% endif %}
-          {% if al.mouUrl %}<a href="{{ al.mouUrl }}" target="_blank" rel="noopener">MoU &rarr;</a>{% endif %}
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-{% endif %}
-
 {% if members and members.length %}
-<section class="alt">
+<section>
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow">People</p>
@@ -149,41 +80,66 @@ layout: layout.njk
 </section>
 {% endif %}
 
-{% if volunteers and page.fileSlug == "communications-and-outreach" %}
-<section>
+{% if volunteers and volunteers.length and page.fileSlug == "communications-and-outreach" %}
+<section class="alt">
   <div class="wrap">
     <p class="eyebrow">Honor Roll</p>
     <h2>Volunteers of the Year</h2>
     <p class="honor-roll-intro">At IAEG Peru, our impact is driven by the dedication of our community. We celebrate the exceptional contributions of active members across all career stages.</p>
+
     {% set sortedVolunteers = volunteers | sort(true, false, "year") %}
     {% set lastYear = "" %}
     {% for v in sortedVolunteers %}
       {% if v.year != lastYear %}
-        {% if not loop.first %}</div></div>{% endif %}
-        <div class="honor-year">
+        {% if not loop.first %}
+          </div></div></div>
+        {% endif %}
+        <div class="honor-year" style="margin-bottom:32px;">
           <p class="honor-year-label">🏅 {{ v.year }} Honorees</p>
-          <div class="grid cols-3">
+          <div class="carousel" style="position:relative;">
+            <div class="carousel-track volunteer-track" id="vol-track-{{ loop.index }}"
+                 style="display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px;">
           {% set lastYear = v.year %}
       {% endif %}
-          <div class="card">
-            {% if v.photo %}
-            <img src="{{ v.photo }}" alt="{{ v.name }}">
-            {% endif %}
-            <div class="body">
-              <h3>{{ v.name }}</h3>
-              {% if v.role %}<div class="meta">{{ v.role }}</div>{% endif %}
-              {% if v.description %}<p>{{ v.description }}</p>{% endif %}
-              {% if v.linkedin %}<a href="{{ v.linkedin }}" target="_blank" rel="noopener">LinkedIn &rarr;</a>{% endif %}
-            </div>
+              <div class="card" style="flex:0 0 240px;scroll-snap-align:start;">
+                {% if v.photo %}
+                <img src="{{ v.photo }}" alt="{{ v.name }}">
+                {% endif %}
+                <div class="body">
+                  <h3>{{ v.name }}</h3>
+                  {% if v.role %}<div class="meta">{{ v.role }}</div>{% endif %}
+                  {% if v.description %}<p>{{ v.description }}</p>{% endif %}
+                  {% if v.linkedin %}<a href="{{ v.linkedin }}" target="_blank" rel="noopener">LinkedIn &rarr;</a>{% endif %}
+                </div>
+              </div>
+      {% if loop.last %}
           </div>
-      {% if loop.last %}</div></div>{% endif %}
+          </div>
+        </div>
+      {% endif %}
     {% endfor %}
   </div>
 </section>
+
+<style>
+  .carousel-track::-webkit-scrollbar { display: none; }
+</style>
+<script>
+  document.querySelectorAll('.volunteer-track').forEach(function (track) {
+    var cards = track.children.length;
+    if (cards <= 3) return; // fits without rotating
+    var idx = 0;
+    setInterval(function () {
+      idx = (idx + 1) % cards;
+      var card = track.children[idx];
+      track.scrollTo({ left: card.offsetLeft - 4, behavior: 'smooth' });
+    }, 4000);
+  });
+</script>
 {% endif %}
 
 {% if featuredLinks and featuredLinks.length %}
-<section class="alt">
+<section>
   <div class="wrap" style="display:flex;gap:14px;flex-wrap:wrap;">
     {% for link in featuredLinks %}
     <a class="btn{% if link.style == 'Secondary' %} secondary{% elif link.style == 'Outline' %} ghost{% endif %}"
@@ -197,7 +153,7 @@ layout: layout.njk
 {% endif %}
 
 {% if collaboration %}
-<section>
+<section class="alt">
   <div class="wrap">
     <div class="grid cols-2">
       <div>
