@@ -88,7 +88,6 @@ layout: layout.njk
     <p class="honor-roll-intro">At IAEG Peru, our impact is driven by the dedication of our community. We celebrate the exceptional contributions of active members across all career stages.</p>
 
     {% set sortedVolunteers = volunteers | sort(true, false, "year") %}
-<<<<<<< HEAD
     <div class="carousel" style="position:relative;margin-top:24px;">
       <button type="button" class="carousel-prev" aria-label="Previous"
               style="position:absolute;left:-18px;top:50%;transform:translateY(-50%);z-index:2;width:36px;height:36px;border-radius:50%;border:1px solid #ddd;background:#fff;cursor:pointer;">&larr;</button>
@@ -105,50 +104,15 @@ layout: layout.njk
             {% if v.role %}<p style="font-size:0.9em;color:#666;margin:2px 0 8px;">{{ v.role }}</p>{% endif %}
             {% if v.description %}<p>{{ v.description }}</p>{% endif %}
             {% if v.linkedin %}<a href="{{ v.linkedin }}" target="_blank" rel="noopener">LinkedIn &rarr;</a>{% endif %}
-=======
-    {% set lastYear = "" %}
-    {% for v in sortedVolunteers %}
-      {% if v.year != lastYear %}
-        {% if not loop.first %}
-          </div></div></div>
-        {% endif %}
-        <div class="honor-year" style="margin-bottom:32px;">
-          <p class="honor-year-label">🏅 {{ v.year }} Honorees</p>
-          <div class="carousel" style="position:relative;">
-            <div class="carousel-track volunteer-track" id="vol-track-{{ loop.index }}"
-                 style="display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px;">
-          {% set lastYear = v.year %}
-      {% endif %}
-              <div class="card" style="flex:0 0 240px;scroll-snap-align:start;">
-                {% if v.photo %}
-                <img src="{{ v.photo }}" alt="{{ v.name }}">
-                {% endif %}
-                <div class="body">
-                  <h3>{{ v.name }}</h3>
-                  {% if v.role %}<div class="meta">{{ v.role }}</div>{% endif %}
-                  {% if v.description %}<p>{{ v.description }}</p>{% endif %}
-                  {% if v.linkedin %}<a href="{{ v.linkedin }}" target="_blank" rel="noopener">LinkedIn &rarr;</a>{% endif %}
-                </div>
-              </div>
-      {% if loop.last %}
->>>>>>> 3a385bca9a568801b782a58a146878eb0cf436dd
           </div>
-<<<<<<< HEAD
         </div>
         {% endfor %}
       </div>
       <button type="button" class="carousel-next" aria-label="Next"
               style="position:absolute;right:-18px;top:50%;transform:translateY(-50%);z-index:2;width:36px;height:36px;border-radius:50%;border:1px solid #ddd;background:#fff;cursor:pointer;">&rarr;</button>
     </div>
-=======
-          </div>
-        </div>
-      {% endif %}
-    {% endfor %}
->>>>>>> 3a385bca9a568801b782a58a146878eb0cf436dd
   </div>
 </section>
-<<<<<<< HEAD
 
 <style>
   .carousel-track::-webkit-scrollbar { display: none; }
@@ -183,24 +147,6 @@ layout: layout.njk
     }
   })();
 </script>
-=======
-
-<style>
-  .carousel-track::-webkit-scrollbar { display: none; }
-</style>
-<script>
-  document.querySelectorAll('.volunteer-track').forEach(function (track) {
-    var cards = track.children.length;
-    if (cards <= 3) return; // fits without rotating
-    var idx = 0;
-    setInterval(function () {
-      idx = (idx + 1) % cards;
-      var card = track.children[idx];
-      track.scrollTo({ left: card.offsetLeft - 4, behavior: 'smooth' });
-    }, 4000);
-  });
-</script>
->>>>>>> 3a385bca9a568801b782a58a146878eb0cf436dd
 {% endif %}
 
 {% if featuredLinks and featuredLinks.length %}
