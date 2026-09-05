@@ -1,19 +1,17 @@
 ---
 collaboration:
   text: >-
-    
-
-    ## Collaborate with Us
-
-
-    The Committee welcomes the participation of IAEG Peru members, students, early-career professionals and specialists interested in scientific communication, digital content, design, outreach, public relations and event promotion.
+    The Committee welcomes the participation of IAEG Peru members, students,
+    early-career professionals and specialists interested in scientific
+    communication, digital content, design, outreach, public relations and event
+    promotion.
 
 
     We also welcome opportunities for collaboration with universities, professional associations, research centers, public institutions and organizations interested in communicating geoscience knowledge responsibly and effectively.
 
 
     For collaboration opportunities, please contact IAEG Peru at [iaeg.peru@gmail.com](mailto:iaeg.peru@gmail.com).
-  title: How the Team Works
+  title: Collaborate with Us
   buttonUrl: https://iaegperu.org/events.html
   buttonLabel: Current and Upcoming Activities
 areas:
@@ -75,6 +73,9 @@ volunteers:
     name: Judith Sullon
     role: PhD Student in Geological Engineering
     photo: /assets/images/judith-nobckblanc-1-.png
+  - year: "2023"
+    name: Karla Tene
+    role: PhD Student in Environmental Science
 ---
 ### **About the Committee**
 
