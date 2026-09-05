@@ -10,7 +10,132 @@ layout: layout.njk
   <div class="post-body">
     {{ content | safe }}
   </div>
-  {% if volunteers %}
+
+  {% if areas and areas.length %}
+  <section class="committee-areas">
+    <h2>Areas of Work</h2>
+    <ul class="areas-list">
+      {% for area in areas %}
+      <li>{{ area }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if workLines and workLines.length %}
+  <section class="committee-worklines">
+    <h2>Lines of Work</h2>
+    <div class="worklines-grid">
+      {% for wl in workLines %}
+      <div class="workline-card">
+        <h3>{{ wl.title }}</h3>
+        {% if wl.description %}<p>{{ wl.description | markdownify | safe }}</p>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if activities and activities.length %}
+  <section class="committee-activities">
+    <h2>Activities</h2>
+    <div class="activities-grid">
+      {% for a in activities %}
+      <div class="activity-card">
+        {% if a.status %}<span class="activity-status activity-status-{{ a.status | lower }}">{{ a.status }}</span>{% endif %}
+        <h3>{{ a.title }}</h3>
+        {% if a.date %}<p class="activity-date">{{ a.date }}</p>{% endif %}
+        {% if a.description %}<p>{{ a.description }}</p>{% endif %}
+        {% if a.buttonUrl and a.buttonLabel %}
+        <a class="btn btn-outline" href="{{ a.buttonUrl }}" target="_blank" rel="noopener">{{ a.buttonLabel }}</a>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if committeeEvents and committeeEvents.length %}
+  <section class="committee-events">
+    <h2>Events</h2>
+    <div class="committee-events-grid">
+      {% for ev in committeeEvents %}
+      <div class="committee-event-card">
+        {% if ev.image %}<img src="{{ ev.image }}" alt="{{ ev.title }}">{% endif %}
+        {% if ev.category %}<span class="event-category">{{ ev.category }}</span>{% endif %}
+        <h3>{{ ev.title }}</h3>
+        {% if ev.date %}<p class="event-date">📅 {{ ev.date }}</p>{% endif %}
+        {% if ev.location %}<p class="event-location">📍 {{ ev.location }}</p>{% endif %}
+        {% if ev.description %}<p>{{ ev.description }}</p>{% endif %}
+        {% if ev.url %}<a class="btn btn-outline" href="{{ ev.url }}" target="_blank" rel="noopener">View Event</a>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if publications and publications.length %}
+  <section class="committee-publications">
+    <h2>Publications and Knowledge</h2>
+    <div class="publications-list">
+      {% for pub in publications %}
+      <div class="publication-card">
+        {% if pub.type %}<span class="publication-type">{{ pub.type }}</span>{% endif %}
+        <h3>{{ pub.title }}</h3>
+        {% if pub.year %}<p class="publication-year">{{ pub.year }}</p>{% endif %}
+        {% if pub.description %}<p>{{ pub.description }}</p>{% endif %}
+        {% if pub.file %}
+        <a class="btn btn-outline" href="{{ pub.file }}" target="_blank" rel="noopener">{{ pub.buttonLabel or "View document" }}</a>
+        {% elif pub.url %}
+        <a class="btn btn-outline" href="{{ pub.url }}" target="_blank" rel="noopener">{{ pub.buttonLabel or "View document" }}</a>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if alliances and alliances.length %}
+  <section class="committee-alliances">
+    <h2>Alliances and Cooperation</h2>
+    <div class="alliances-grid">
+      {% for al in alliances %}
+      <div class="alliance-card">
+        {% if al.logo %}<img class="alliance-logo" src="{{ al.logo }}" alt="{{ al.name }}">{% endif %}
+        <h3>{{ al.name }}</h3>
+        {% if al.description %}<p>{{ al.description }}</p>{% endif %}
+        <div class="alliance-links">
+          {% if al.url %}<a href="{{ al.url }}" target="_blank" rel="noopener">Website</a>{% endif %}
+          {% if al.mouUrl %}<a href="{{ al.mouUrl }}" target="_blank" rel="noopener">MoU / Agreement</a>{% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if members and members.length %}
+  <section class="committee-members">
+    <h2>Committee Members</h2>
+    <div class="members-grid">
+      {% for m in members %}
+      <div class="member-card">
+        {% if m.photo %}
+        <img class="member-photo" src="{{ m.photo }}" alt="{{ m.name }}">
+        {% else %}
+        <div class="member-photo member-photo-placeholder">👤</div>
+        {% endif %}
+        <strong class="member-name">{{ m.name }}</strong>
+        {% if m.role %}<p class="member-role">{{ m.role }}</p>{% endif %}
+        {% if m.bio %}<p class="member-bio">{{ m.bio }}</p>{% endif %}
+        {% if m.url %}<a class="member-link" href="{{ m.url }}" target="_blank" rel="noopener">🔗 Profile</a>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if volunteers and page.fileSlug == "communications-and-outreach" %}
   <section class="honor-roll">
     <p class="eyebrow">Honor Roll</p>
     <h2>Volunteers of the Year</h2>
@@ -38,6 +163,28 @@ layout: layout.njk
           </div>
       {% if loop.last %}</div></div>{% endif %}
     {% endfor %}
+  </section>
+  {% endif %}
+
+  {% if featuredLinks and featuredLinks.length %}
+  <section class="committee-featured-links">
+    {% for link in featuredLinks %}
+    <a class="btn btn-{{ link.style | lower }}"
+       href="{{ link.url }}"
+       {% if link.newTab %}target="_blank" rel="noopener"{% endif %}>
+      {{ link.label }}
+    </a>
+    {% endfor %}
+  </section>
+  {% endif %}
+
+  {% if collaboration %}
+  <section class="committee-collaboration">
+    <h2>{{ collaboration.title or "Participate / Collaborate with the Committee" }}</h2>
+    {% if collaboration.text %}<p>{{ collaboration.text }}</p>{% endif %}
+    {% if collaboration.buttonUrl %}
+    <a class="btn btn-primary" href="{{ collaboration.buttonUrl }}">{{ collaboration.buttonLabel or "Contact the Committee" }}</a>
+    {% endif %}
   </section>
   {% endif %}
 </article>
