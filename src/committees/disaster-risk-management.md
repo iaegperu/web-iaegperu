@@ -5,7 +5,7 @@ summary: This Committee works on developing and promoting scientific
   perspective. Established in 2023, the group brings together professionals and
   researchers committed to integrating geosciences with ethical, inclusive, and
   context-sensitive approaches to disaster risk governance.
-image: /assets/images/webinar-drm2.jpg
+image: /assets/images/portada-drm-iaeg-peru.png
 areas:
   - "Disaster Risk Management "
   - Geotechnologies and Spatial Analysis
