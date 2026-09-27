@@ -1,11 +1,12 @@
 ---
 title: The 4th Peruvian Geosciences Olympiad is officially underway! 🌎🇵🇪✨
 date: 2026-09-27
+image: /assets/images/ol4opg.jpg
 summary: The 4th Peruvian Geosciences Olympiad is now open! Test your knowledge,
   compete nationally, and join the pathway to IESO 2027. Review the official
   rules, register today, and be part of Peru’s next generation of Earth science
   leaders.
-pdf: /assets/documents/ol4opg.jpg
+pdf: ""
 ---
 If you are passionate about Geosciences, the planet, and want to test your knowledge, this is your chance! Follow these steps to participate:
 
