@@ -69,6 +69,7 @@ volunteers:
   - year: "2024"
     name: Rubén Romero Mayma
     role: Graduate in Geological Engineering
+    photo: /assets/images/ruben.jpg
   - year: "2022"
     name: Judith Sullon
     role: PhD Student in Geological Engineering
