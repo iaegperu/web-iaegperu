@@ -19,7 +19,7 @@ This session explores how innovative materials engineering transforms mining tai
 
 🕖 Time: 8:00 PM (Peru Time / UTC-5)   
 
-💻 *Join the broadcast or request the Zoom access link via direct message or in the comments below.*
+💻 *Fill out [this form ](https://forms.gle/UXySbKbVXF1wYbHk6)to get the Zoom access link.*
 
 We look forward to seeing you there! 🤝🌎
 
