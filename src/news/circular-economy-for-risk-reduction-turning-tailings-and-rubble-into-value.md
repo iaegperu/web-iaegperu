@@ -1,10 +1,10 @@
 ---
 title: "Circular Economy for Risk Reduction: Turning Tailings and Rubble into Value"
 date: 2026-11-19
-image: /assets/images/blake.png
+image: /assets/images/blake-stacey.png
 summary: "Join our upcoming DRM Webinar, “Building Resilience from Waste:
   Tailings, Rubble & Circular Economy,” with Australian Principal Materials
-  Engineer Blake Stacey, founder of LayGo Blocks, on December 8 at 7:00 PM (Peru
+  Engineer Blake Stacey, founder of LayGo Blocks, on December 8 at 8:00 PM (Peru
   time)."
 ---
 “From Tailings and Rubble to Building Blocks: Risk Reduction and Circular Economy” is the upcoming online lecture by our distinguished guest speaker:   
@@ -17,11 +17,9 @@ This session explores how innovative materials engineering transforms mining tai
 
 📅 Date: December 8, 2026   
 
-🕖 Time: 7:00 PM (Peru Time / UTC-5)   
+🕖 Time: 8:00 PM (Peru Time / UTC-5)   
 
-💻 Streaming live on: Facebook Live & Zoom   
-
-🔗 *Join the broadcast or request the Zoom access link via direct message or in the comments below.*
+💻 *Join the broadcast or request the Zoom access link via direct message or in the comments below.*
 
 We look forward to seeing you there! 🤝🌎
 
