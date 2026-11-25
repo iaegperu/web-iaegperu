@@ -1,7 +1,7 @@
 ---
 title: "YEG Peru Webinar: From Rock Mass Characterization to Underground Mining
   Project Management"
-date: 2026-11-25
+date: 2026-11-26
 image: /assets/images/yeg-peru-webinar-nov-english-.png
 summary: Our YEG Peru team invite you to a free online technical webinar on an
   integrated approach to geology, structural geology, hydrogeology and
