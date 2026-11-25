@@ -9,11 +9,11 @@ summary: Our YEG Peru team invite you to a free online technical webinar on an
 ---
 IAEG Peru and the IAEG Peruvian Group invite you to our next technical webinar:
 
-From rock mass characterization to underground mining project management: an integrated approach to geology, structural geology, hydrogeology and geomechanics
+From rock mass characterization to underground mining project management: an integrated approach to geology, hydrogeology and geomechanics
 
 📅 Date: Saturday, 12 December 2026 🕖 Time: 7:00 pm (Peru time, UTC-5) 💻 Format: Online 🎟️ Admission: Free
 
-Speaker: Eng. Kevin Arnold Gómez Castillo
+Speaker: Eng. Kevin Gómez
 
 Engineering Geologist and geomechanics specialist, with around five years of professional experience in the mining sector, including underground and open pit operations in Peru and Colombia. His work covers geomechanical and structural characterization of the rock mass, stability assessment, geomechanical risk analysis and ground control. In his most recent role he led the Geomechanics area, coordinating technical assessments to ensure stable and safe mining operations.
 
